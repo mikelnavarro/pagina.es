@@ -1,0 +1,81 @@
+* {
+    margin: auto:
+}
+
+
+form {
+    display: inline-block;
+    margin: 1.5rem 2.5rem;
+    padding: 2rem;
+    border-radius: 2.0rem;
+    background-color: #e7e7e7;
+    color: black;
+    font-weight: bold;
+}
+
+h1, h2 {
+    font-family: 'Times News Roman', 'Arial';
+    color: black;
+}
+
+input[type=text], input[type=date] {
+    margin: 2.0rem;
+    padding: 1rem;
+    font-size: larger;
+    font-family: 'Arial';
+}
+
+#submitButton, #otro {
+    border-style: none;
+    border-radius: 2.3rem;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    background-color: rgb(72, 72, 255);
+    padding: 1rem;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 3.1rem;
+    margin-top: auto;
+}
+
+#submitButton:hover, #otro:hover {
+    background-color: rgb(25, 25, 248);
+    cursor: pointer;
+    font-size: larger;
+    transition: 0.2s;
+}
+
+#texto {
+    display: grid;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: auto;
+    border-radius: 3rem;
+    background-color: rgb(125, 229, 105);
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+    padding: 3rem;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    width: 25%;
+}
+
+#otraCosa {
+    display: grid;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: auto;
+    border-radius: 3rem;
+    background-color: rgb(125, 229, 105);
+    color: white;
+    font-weight: bold;
+    padding: 3rem;
+    margin-bottom: 4rem;
+    width: 25%;
+}

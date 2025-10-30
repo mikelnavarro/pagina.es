@@ -23,19 +23,18 @@ primerapellido.onclick = verContenido;
 
 /*
  Trabajando con innerHTML */
-function ponOtros() {
+function ponTexto1() {
   let mensaje = prompt("Dame un texto y lo haré un párrafo");
   let etiq = document.getElementById("otraCosa");
   etiq.innerHTML += "<p>" + mensaje + "</p>";
 }
-function ponTexto() {
+function ponTexto2() {
   let mensaje = prompt("Dame un texto y lo haré un párrafo");
   let etiq = document.getElementById("texto");
   etiq.innerHTML += "<p>" + mensaje + "</p>";
 }
-document.getElementById("submitButton").onclick = ponTexto;
-document.getElementById("otro").onclick = ponOtros;
-
+document.getElementById("otro").onclick = ponTexto2;
+document.getElementById("submitButton").onclick = ponTexto1;
 function checkForm() {
   let valor = document.getElementById("nombre").value;
   if (valor == "" || valor == null) {
@@ -43,4 +42,4 @@ function checkForm() {
     return false;
   } else return true;
 }
-document.getElementById("formulario").onsubmit = checkForm;
+document.getElementById("myform").onsubmit = checkForm;
