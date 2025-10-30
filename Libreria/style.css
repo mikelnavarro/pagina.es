@@ -1,0 +1,109 @@
+* {
+  font-family: "Arial";
+}
+
+body {
+  margin: auto;
+  font-weight: bolder;
+}
+
+h1 {
+  font-size: 3%;
+  margin: 0.3rem;
+}
+
+p {
+  text-align: justify;
+  justify-content: first baseline;
+  text-spacing-trim: trim-start;
+  margin: 0.3rem;
+}
+
+.acciones {
+  background-color: rgb(163, 226, 255);
+  background-repeat: repeat-y;
+  margin: auto;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.consultar {
+  background-color: #ff5353;
+  border-style: inset;
+  color: black;
+  border-radius: 1rem;
+  text-align: center;
+  border-width: 0.2rem;
+  padding: 3rem;
+  align-items: center;
+  text-align: center;
+  width: 3rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin-left: auto;
+}
+
+.crear {
+  background-color: #ffee53;
+  border-style: inset;
+  color: black;
+  border-radius: 1rem;
+  text-align: center;
+  border-width: 0.2rem;
+  padding: 3rem;
+  align-items: center;
+  text-align: center;
+  width: 3rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin-left: auto;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.consultar:hover {
+  background-color: #ff5353;
+  cursor: pointer;
+}
+
+.crear:hover {
+  background-color: #ffee53;
+  cursor: pointer;
+}
+
+header {
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-list {
+  text-align: center;
+  list-style: none;
+}
+
+header ul li {
+  text-align: center;
+  list-style: none;
+}
+
+.creacionPag {
+  display: block;
+  flex-direction: wrap;
+  background-color: rgb(163, 226, 255);
+  background-repeat: repeat-y;
+  margin: auto;
+  padding: 1.4rem;
+}
+
+#nombre, #pag {
+  display: block;
+  background-color: #ffffff;
+  padding: 0.3rem;
+  margin: 1.0rem;
+  align-items: center;
+  border-style: none;
+}
