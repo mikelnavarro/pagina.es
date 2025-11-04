@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="app.js" type="module"></script>
+    <script src="Persona.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2>Formulario Citas</h2>
+    </header>
+    <nav id="navbar">
+        <ul class="menu">
+            <li class="nav-link"><a href="../ejercicio_e.html">Ejercicio e</a></li>
+            <li class="nav-link"><a href="../documentacion_proyecto-de-mi-casa-.txt">Proyecto Documentación</a></li>
+            <li class="nav-link">
+                <a href=" ">Google</a>
+                <ul class="sub-menu">
+                    <li class="nav-link"><a href=" ">Google</a></li>
+                    <li class="nav-link"><a href=" ">Google</a></li>
+                </ul>
+            </li>
+            <li class="nav-link"><a href="../FormularioInscripcion/index.html">Formulario</a></li>
+            <li class="nav-link"><a href="../calendario-2025.jpg">calendario</a></li>
+        </ul>
+    </nav>
+
+    <!-- FORMULARIO PARA RELLENAR -->
+
+    <form id="form">
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" name="nombre" required />
+        <label for="primerapellido">Primer apellido: </label>
+        <input type="text" id="primerapellido" name="primerapellido" required />
+        <label for="dni">DNI: </label>
+        <input type="text" id="dni" name="dni" placeholder="DNI (87654321B)" pattern="[0-9]{8}[A-Za-z]{1}" required />
+
+        <input type="submit" id="Submit" value="Cita Previa" />
+    </form>
+    <div id="lista-citas">
+        <!-- Aquí ira la lista de personas que pedirán cita. -->
+    </div>
+    <a id="consultarpersonas" href="consultar.html" alt="consultar cuántas personas">Consultar Lista</a>
+</body>
+
+</html>

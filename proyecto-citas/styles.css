@@ -1,0 +1,130 @@
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #000000;
+  margin: 6rem;
+  padding: 15px;
+  border-radius: 5rem;
+  width: 50%;
+}
+
+input[type="text"] {
+  padding: 0.4rem;
+  width: 50%;
+  margin: 0.4rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#Submit {
+  color: white;
+  padding: 6px;
+  width: 40%;
+  height: 60%;
+  background-color: #0404f0;
+  border-style: none;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 2.3rem;
+  margin: 0.3rem;
+}
+#Submit:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #000098;
+}
+
+#lista-citas {
+  display: inline-block;
+  align-items: center;
+  box-shadow: #faffe6;
+  border-radius: 3rem;
+  margin: 0.4rem;
+  padding: 3rem;
+}
+
+#consultarpersonas {
+text-decoration: none;
+  color: white;
+  padding: 1.5rem;
+  width: 40%;
+  background-color: #0404f0;
+  border-style: none;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 2.3rem;
+  margin: 0.4rem 0.3rem;
+}
+
+#consultarpersonas:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #000098;
+}
+
+#section {
+  display: inline-block;
+  align-items: center;
+  box-shadow: #faffe6;
+  border-radius: 3rem;
+  margin: 0.4rem;
+  padding: 3rem;
+}
+
+header {
+    text-align: center;
+    align-items: center;
+    color: black;
+    padding: 30px;
+    background-color: #5db0f9;
+}
+
+#navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+#navbar .menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+#navbar .nav-link a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+}
+
+#navbar .nav-link a:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.sub-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #444;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  min-width: 120px;
+  border-radius: 4px;
+}
+
+.nav-link:hover .sub-menu {
+  display: flex;
+}
+
+.sub-menu a {
+  padding: 8px;
+}
