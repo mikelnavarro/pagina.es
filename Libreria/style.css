@@ -88,7 +88,7 @@ header {
 }
 
 .carrusel {
-  background-image: url('/Libreria/image/carousel.png');
+  background-image: url('image/carousel.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
