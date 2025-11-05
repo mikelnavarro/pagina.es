@@ -78,6 +78,8 @@ header {
   color: white;
   display: flex;
   flex-direction: row;
+  border-bottom: #ffee53;
+  border-style: solid;
 }
 
 .menu-list {
@@ -85,12 +87,25 @@ header {
   list-style: none;
 }
 
+.carrusel {
+  background-image: url('/Libreria/image/carousel.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 200px;
+  width: 100%;
+}
+
+header ul li img {
+  width: 40%;
+  align-items: left;
+}
 header ul li {
-  text-align: center;
   list-style: none;
 }
 
-.creacionPag {
+
+#lista-datos {
   display: block;
   flex-direction: wrap;
   background-color: rgb(163, 226, 255);
@@ -99,6 +114,17 @@ header ul li {
   padding: 1.4rem;
 }
 
+#formulario {
+  display: block;
+  flex-direction: wrap;
+  background-color: rgb(163, 226, 255);
+  background-repeat: repeat-y;
+  margin: auto;
+  padding: 1.4rem;
+}
+
+
+
 #nombre, #pag {
   display: block;
   background-color: #ffffff;
@@ -106,4 +132,14 @@ header ul li {
   margin: 1.0rem;
   align-items: center;
   border-style: none;
+}
+#section {
+  background-color: rgb(130, 130, 255);
+}
+#lista-datos {
+  border: 0.3rem solid black;
+  border-radius: 0.2rem;
+  background-color: whitesmoke;
+  width: 30%;
+  height: auto;
 }

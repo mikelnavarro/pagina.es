@@ -8,15 +8,15 @@ form {
   flex-direction: column;
   align-items: center;
   box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #000000;
-  margin: 6rem;
-  padding: 15px;
+  margin: 20% 20% 20% 20%;
+  padding: 40px;
   border-radius: 5rem;
   width: 50%;
 }
 
 input[type="text"] {
   padding: 0.4rem;
-  width: 50%;
+  width: 70%;
   margin: 0.4rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
@@ -83,7 +83,10 @@ header {
     padding: 30px;
     background-color: #5db0f9;
 }
-
+#logogobierno {
+  width: 70%;
+  box-shadow: 4px 4px 4px 4px #444;
+}
 #navbar {
   background-color: #333;
   padding: 10px;

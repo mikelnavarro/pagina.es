@@ -8,6 +8,8 @@ const apellidoInput = document.getElementById("primerapellido");
 const dniInput = document.getElementById("dni");
 const listaCitas = document.getElementById("lista-citas");
 
+
+
 // Creamos el Array
 let arrayPersonas = [];
 

@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" type="module"></script>
+  <script src="Libro.js" type="module"></script>
 </head>
 <body>
-    <header>
-      <ul class="menu-list">
-        <li>
-          <a href="https://www.iescomercio.com/"
-            ><img src="image/logo.png" alto="logotipo"
-          /></a>
-        </li>
-        <li>Librería Comercio</li>
-      </ul>
-    </header>
-    <!-- Main Principal -->
-    <main id="principal">
-      <section class="carrusel">
-        <img src="image/carousel.png" alt="img grande" />
-      </section>
-      <span class="id01"></span>
-      <form action="" method="" class="creacionPag" onsubmit="return validate()">
-        
-        <label for="nombre">Nombre: </label>
-        <input type="text" id="nombre" name="nombre" required>
-        <label for="pag">Paginas: </label>
-        <input type="text" id="pag" name="pag" required>
-        <label for="prestamo">Prestado </label>
-        <input type="checkbox" id="prestamo">
-        <input type="button" class="crear" value="Crear">
-      </form>
-    </main>
-</section>
+  <header>
+    <ul class="menu-list">
+      <li>
+        <a href="index.html"><img src="/logogobierno.png" alto="logotipo" /></a>
+      </li>
+      <li>Librería Comercio</li>
+    </ul>
+  </header>
+  <!-- Main Principal -->
+  <main id="principal">
+    <section class="carrusel">
+      <img src="image/carousel.png" alt="img grande" />
+    </section>
+    <span class="id01"></span>
+    <form action="" id="formulario" method="">
+      <label for="nombre">Nombre: </label>
+      <input type="text" id="nombre" name="nombre">
+      <label for="pag">Paginas: </label>
+      <input type="text" id="pag" name="pag">
+      <label for="prestamo">Prestado </label>
+      <input type="checkbox" id="prestamo">
+      <input type="submit" class="crear" value="Crear" />
+    </form>
+  </main>
+  </section>
 </body>
+
 </html>
