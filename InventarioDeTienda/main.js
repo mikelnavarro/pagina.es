@@ -50,6 +50,7 @@ formularioProducto.addEventListener("submit", function (event) {
 /* Funcion Para Mostrar */
 function mostrarProductos() {
   sectionListar.innerHTML = "";
+  sectionListar.classList.add("producto-card");
   if (arrayProductos.length === 0) {
     sectionListar.innerHTML = "<p>No hay productos a mostrar.</p>";
     return;
@@ -57,7 +58,7 @@ function mostrarProductos() {
   // Mostrar los productos
   arrayProductos.forEach((p) => {
     const div = document.createElement("div");
-    div.classList.add("producto-individual");
+    div.classList.add("producto-card");
     div.innerHTML = `
             <p>Producto: ${p.nombre}</p>
             <p>Categoria: ${p.categoria}</p>
@@ -65,6 +66,9 @@ function mostrarProductos() {
             <p>Precio Base: ${p.precioBase}</p>
             <p>Fecha (en español): ${p.formatearFechaCreacion()}</p>
     `;
+    div.style.backgroundColor = "#f0f0f0";
+    div.style.border = "1px solid #ccc";
+    div.style.padding = "1rem";
     sectionListar.appendChild(div);
   });
 }

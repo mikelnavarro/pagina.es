@@ -1,3 +1,9 @@
+:root {
+  --color-primario: #4ab7ff;
+  --color-secundario: #f38989;
+  --color-fondo: #fbf3f3;
+  --color-acento: #0404f0;
+}
 body {
     font-family: 'Arial';
     margin: auto;
@@ -29,7 +35,9 @@ header {
 label {
     grid-column-start: 1;
 }
-
+input, select, #Submit {
+  transition: all 0.3s ease-in-out;
+}
 input[type="text"],
 input[type="number"],
 select {
@@ -58,7 +66,10 @@ select {
     color: white;
     background-color: #000098;
 }
-
+#Submit:focus {
+  outline: 2px solid #000098;
+  outline-offset: 2px;
+}
 
 
 /* Pie de Página */
@@ -89,7 +100,11 @@ footer #socialmedia a:hover {
     transform: perspective();
     transition: 2s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
-
+footer {
+  visibility: visible;
+  display: flex;
+  justify-content: space-between;
+}
 #lista-productos {
     flex-wrap: wrap;
     margin: 2rem;
@@ -110,3 +125,14 @@ footer #socialmedia a:hover {
     border: 0.2rem solid black;
 }
 
+#producto-individual .producto-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+#producto-individual .producto-card:hover {
+  transform: scale(1.02);
+}
