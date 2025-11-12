@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cambio de Divisa</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js" type="module"></script>
+    <script defer src="constantes.js" type="module"></script>
+    <script defer src="cambioDivisa.js" type="module"></script>
+    <style></style>
+    
+</head>
+
+<body>
+
+    <!-- PAGINA PRINCIPAL -->
+    <main>
+        <form action="##" method="GET">
+            <label class="labelImporte">Importe: </label>
+            <input type="number" value="0" class="inputImporte">
+
+            <label class="labelFrom">De: </label>
+            <select name="divisaFrom" id="divisaFrom">
+                <option value="libra">Libra</option>
+                <option value="dolar">Dolar</option>
+                <option value="euro">Euro</option>
+            </select>
+            <label class="labelTo">A: </label>
+            <select name="divisaTo" id="divisaTo">
+                <option value="libra">Libra</option>
+                <option value="dolar">Dolar</option>
+                <option value="euro">Euro</option>
+            </select>
+
+
+            
+            <!-- INPUT BUTTOM SUBMIT -->
+            <input type="submit" class="inputSubmit" value="Cambiar">
+
+        </form>
+        <!-- SECCION DE HISTÓRICO -->
+        <h1>Histórico</h1>
+        <section id="historic">
+
+            
+        </section>
+    </main>
+
+</body>
+
+</html>

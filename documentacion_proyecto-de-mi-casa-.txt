@@ -1,0 +1,10 @@
+
+Asistencia informática:
+
+- ID (automatico)
+- DNI (NIF)
+- Nombre
+- Apellido 1
+- Apellido 2
+- Fecha de nacimiento
+- Botón de Pon Texto 1

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de la Tienda</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="main.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <h2>Inventario de Tienda</h2>
+        <p class="subtitle">
+            Este es un inventario de una tienda que permitirá introducir productos y
+            calcular sus precios, así como generar sus códigos.
+        </p>
+    </header>
+    <main class="principal">
+        <section id="background"></section>
+        <form id="formulario-inventario" method="" action="">
+            <!-- Rellenar Campos -->
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" name="nombre" />
+            <label for="precioBase">Precio Base: </label>
+            <input type="text" id="precioBase" name="precioBase" />
+            <select id="categoriaProducto">
+                <option value="alimentacion">Alimentación</option>
+                <option value="limpieza">Limpieza</option>
+                <option value="higiene">higiene</option>
+                <option value="informatica">Informática</option>
+                <option value="musical">Musical</option>
+            </select>
+            <input type="submit" id="Submit" value="Guardar" />
+        </form>
+        <button type="button" id="borrarProducto">Borrar</button>
+        <button type="button" id="limpiarLocal">LIMPIAR</button>
+        <section id="lista-productos">
+            <div id="producto-individual"></div>
+        </section>
+    </main>
+    <footer>
+        <h2>Síguenos en redes sociales:</h2>
+        <section id="socialmedia">
+            <span><a class="x" href="https://www.x.com">X (Twitter)</a></span>
+            <span><a class="instagram" href="https://www.instagram.com">Instagram</a></span>
+            <span><a class="tiktok" href="https://www.tiktok.com">Tik Tok</a></span>
+        </section>
+        <span>&copy; Aviso Legal</span>
+    </footer>
+</body>
+
+</html>

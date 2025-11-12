@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="buscador.js" type="module"></script>
+    <script src="main.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <h3>Thomas y sus Amigos: Gestor de Trenes</h3>
+    </header>
+    <main>
+        <form id="registroTrenes" method="">
+            <h1>Registrar Nuevo Tren</h1>
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" name="nombre">
+            <label for="velocidad">Velocidad (km/h): </label>
+            <input type="number" id="velocidad" name="velocidad" max="300" min="10">
+            <p id="tipo">Tipo:
+                <select id="tipo">
+                    <option value="vapor">Vapor</option>
+                    <option value="diesel">Diésel</option>
+                    <option value="electrico">Eléctrico</option>
+                    <option value="Maglev">Maglev</option>
+                </select>
+                <input type="submit" id="registraTren" value="Añadir Tren">
+        </form>
+        <section id="seleccionarTrenes">
+            <label>Tren: </label>
+            <input type="text" id="nombre" name="nombre">
+            <label>Velocidad: </label>
+            <input type="text" id="velocidad" name="velocidad">
+            <label>Tipo: </label>
+                <select id="tipo">
+                    <option value="vapor">Vapor</option>
+                    <option value="diesel">Diésel</option>
+                    <option value="electrico">Eléctrico</option>
+                    <option value="Maglev">Maglev</option>
+                </select>            
+            <select id="selectTrenes">
+                <option selected value="Seleccion el tren">Selecciona el tren</option>
+            </select>
+        </section>
+        <label for="busqueda">Busca por nombre</label>
+        <input type="text" id="busqueda" name="busqueda">
+        <button id="botonBuscar">Search</button>
+        <section id="listadoTrenes">
+            <div id="div"></div>
+        </section>
+        <button id="limpiarLocal">Borrar todos</button>
+    </main>
+
+</body>
+
+</html>

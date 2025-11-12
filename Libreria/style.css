@@ -1,0 +1,163 @@
+* {
+  font-family: "Arial";
+}
+
+body {
+  margin: auto;
+  font-weight: bolder;
+}
+
+h1 {
+  font-size: 3%;
+  margin: 0.3rem;
+}
+
+p {
+  text-align: justify;
+  justify-content: first baseline;
+  text-spacing-trim: trim-start;
+  margin: 0.3rem;
+}
+
+.acciones {
+  background-color: rgb(163, 226, 255);
+  background-repeat: repeat-y;
+  margin: auto;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.consultar {
+  background-color: #ff5353;
+  border-style: inset;
+  color: black;
+  border-radius: 1rem;
+  text-align: center;
+  border-width: 0.2rem;
+  padding: 3rem;
+  align-items: center;
+  text-align: center;
+  width: 3rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin-left: auto;
+}
+
+.crear {
+  background-color: #ffee53;
+  border-style: inset;
+  color: black;
+  border-radius: 1rem;
+  text-align: center;
+  border-width: 0.2rem;
+  padding: 3rem;
+  align-items: center;
+  text-align: center;
+  width: 3rem;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin-left: auto;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.consultar:hover {
+  background-color: #ff5353;
+  cursor: pointer;
+}
+
+.crear:hover {
+  background-color: #ffee53;
+  cursor: pointer;
+}
+
+header {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  border-bottom: #ffee53;
+  border-style: solid;
+}
+
+.menu-list {
+  text-align: center;
+  list-style: none;
+}
+
+.carrusel {
+  background-image: url("image/carousel.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 200px;
+  width: 100%;
+}
+
+header ul li img {
+  width: 40%;
+  align-items: left;
+}
+
+header ul li {
+  list-style: none;
+}
+
+#lista-datos {
+  display: block;
+  flex-direction: wrap;
+  background-color: rgb(163, 226, 255);
+  background-repeat: repeat-y;
+  margin: auto;
+  padding: 1.4rem;
+}
+
+#formulario {
+  display: block;
+  flex-direction: wrap;
+  background-color: rgb(163, 226, 255);
+  background-repeat: repeat-y;
+  margin: auto;
+  padding: 1.4rem;
+}
+
+#nombre,
+#pag {
+  display: block;
+  background-color: #ffffff;
+  padding: 0.3rem;
+  margin: 1rem;
+  align-items: center;
+  border-style: none;
+}
+
+#section {
+  background-color: rgb(130, 130, 255);
+}
+
+#lista-datos {
+  border: 0.3rem solid black;
+  border-radius: 0.2rem;
+  background-color: whitesmoke;
+  width: 30%;
+  height: auto;
+}
+
+#encabezado {
+  border-radius: 0.3rem;
+  box-shadow: 4px 4px 4px 4px black;
+  border-color: black;
+  border-style: solid;
+  display: block;
+  align-items: center;
+  width: 40%;
+  margin: 0.5rem;
+  background-color: white;
+}
+
+.consulta {
+  padding: 0.3rem;
+  background-color: rgb(163, 226, 255);
+}
