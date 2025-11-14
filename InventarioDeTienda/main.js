@@ -1,3 +1,4 @@
+import { CartObserver } from "./cartObserver.js";
 import { Producto } from "./Producto.js";
 const formularioProducto = document.getElementById("formulario-inventario");
 const nombreInput = document.getElementById("nombre");
@@ -10,6 +11,17 @@ const sectionTotal = document.getElementById("total");
 
 
 let arrayProductos = [];
+const cart = [];
+const cartObs = new CartObserver();
+cartObs.subscribe(total => {
+    document.getElementById("total").textContent = total + "$";
+});
+function addToCart(producto){
+    cart.push(producto);
+    const total = cart.reduce((s, p) => s + p.precioConIVA, 0);
+    cartObs.notify(total);
+    mostrarProductos(producto);
+}
 
 function cargarEnLocalStorage() {
   const datos = localStorage.getItem("arrayProductos");
@@ -22,6 +34,7 @@ function cargarEnLocalStorage() {
       p.generarCodigoProducto();
       p.fechaCreacion = new Date(obj.fechaCreacion);
       p.calcularPrecioIVA();
+      addToCart(p);
       return p;
     });
   }
@@ -47,7 +60,7 @@ formularioProducto.addEventListener("submit", function (event) {
     alert("Precio No Válido.");
     return;
   }
-  agregarProducto(nombre, precioBase, categoriaProducto);
+  agregarProducto(nombre, precioBase, categoriaProducto);ç
   formularioProducto.reset();
 });
 /* Funcion Para Mostrar */
