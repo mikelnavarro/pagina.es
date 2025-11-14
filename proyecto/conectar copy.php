@@ -9,7 +9,9 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   $sql = "INSERT INTO usuarios (nombre, apellido, edad, clave, rol, email) VALUES 
-  ('John', 'Doe', 20, 'AB123', 0, 'john@example.com')";
+  ('John', 'Doe', 20, 'AB123', 0, 'john@example.com'),
+  ('Juanito', 'Fernandez', 60, '753NF', 1, 'juanitofernandez@outlook.es'),
+  ('Pepe', 'Gimenez', 64, '7RTIRNF', 1, 'pepegimenez@outlook.com')";
 
 
 

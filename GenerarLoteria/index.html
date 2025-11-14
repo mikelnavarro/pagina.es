@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>LOTERÍA ONDA ESPAÑA</title>
+</head>
+<body>
+
+    <h1>¡LOTERÍA ONDA ESPAÑA!</h1>
+    <form id="formularioDatos" method="POST" action="guardar_datos.php">
+        <label for="nombre">Datos Personales</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+        <input type="text" id="dni" name="dni" placeholder="DNI" required>
+        <input type="text" id="provincia" name="provincia" placeholder="Provincia/CCAA" required>
+        <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" required>
+
+        <!-- Campos ocultos para enviar los datos generados -->
+        <input type="hidden" id="numeroSerie" name="numeroSerie">
+        <input type="hidden" id="decimo" name="decimo">
+        <input type="hidden" id="codigoSeguridad" name="codigoSeguridad">
+
+        <button type="button" onclick="generarDecimoLoteria()">¡Participar en la Lotería!</button>
+    </form>
+
+    <script src="scripts.js"></script>
+       
+
+</body>
+</html>
+    AWÑ´-

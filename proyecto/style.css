@@ -1,0 +1,42 @@
+
+
+* {
+    font-family: 'Comic Sans MS';
+
+}
+
+body {
+    font-family: 'Comic Sans MS';
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+label {
+    flex-basis: 60%;
+    gap: 2em;
+    
+}
+
+input {
+    flex-basis: 60%;
+    gap: 2em;
+}
+
+input[type="submit"] {
+    border-radius: 2%;
+    border-style: none;
+    gap: 2em;
+    margin: 4rem;
+    padding: 0.6rem;
+    width: 30%;
+    height: 50%;
+    background-color: #78beff;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #9578ff;
+}
