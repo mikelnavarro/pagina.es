@@ -23,11 +23,11 @@ formularioGestor.addEventListener("submit", (e) => {
     const priority = document.getElementById("priority").value;
 
     // Comprobamos si el titulo esta rellenado
-    if (!title)
+    if (!title) {
         return alert("Debe completar el campo Titulo.");
+    }
 
-
-
+    
     // Añadir elementos
     addTarea(title, description, priority);
 

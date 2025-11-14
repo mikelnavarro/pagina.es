@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <!-- Formulario -->
+        <form id="formulario" action="form.php" method="POST">
+            <label for="from">Remitente: </label><br>
+            <input type="email" id="remitente" name="remitente"><br>
+
+            <label for="to">Desintatario: </label><br>
+            <input type="email" id="destinatario" name="destinatario"><br>
+
+            <label for="CC">CC: </label><br>
+            <input type="email" id="CC" name="CC"><br>
+
+            <label for="subject">Subject: </label><br>
+            <input type="text" id="subject" name="subject"><br>
+
+            <label for="attachment">Files: </label><br>
+            <input type="file" id="attachment" name="attachment"><br>
+
+            <label for="body">Cuerpo: </label><br>
+            <textarea name="body" id="body"></textarea><br>
+
+            <input type="submit" value="Enviar Correo">
+
+        </form>
+        <hr>
+
+    </main>
+</body>
+</html>
