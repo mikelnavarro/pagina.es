@@ -1,0 +1,16 @@
+{
+    "name": "mikel/bbddud03-dwes",
+    "description": "Proyecto Actividad UD03",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Mikel\\Bbddud03Dwes\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mikel"
+        }
+    ],
+    "require": {}
+}
