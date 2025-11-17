@@ -7,6 +7,6 @@ CREATE TABLE lectura
     autor VARCHAR(255),
     paginas INT,
     terminado BOOLEAN,
-    fecha_lectura DATE,
+    fecha_lectura DATE DEFAULT '2000-01-01',
     CONSTRAINT pk_hobbys_lectura PRIMARY KEY (id)
 );
