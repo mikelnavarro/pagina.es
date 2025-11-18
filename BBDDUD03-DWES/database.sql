@@ -1,12 +1,12 @@
-CREATE DATABASE portal_noticias;
-USE portal_noticias;
-CREATE TABLE usuarios (
-    dni VARCHAR(9),
-    nombre VARCHAR(20),
-    apellido VARCHAR(50),
-    telefono VARCHAR(9),
-    nombre_usuario VARCHAR(70),
-    contrasena VARCHAR(80)
-    CONSTRAINT pk_usuarios_dni PRIMARY KEY(dni),
-    
-)
+CREATE DATABASE actividad_hobbys;
+USE actividad_hobbys;
+CREATE TABLE lectura 
+(
+    id INT AUTO_INCREMENT,
+    titulo_libro VARCHAR(255) UNIQUE KEY,
+    autor VARCHAR(255),
+    paginas INT,
+    terminado BOOLEAN,
+    fecha_lectura DATE DEFAULT '2000-01-01',
+    CONSTRAINT pk_hobbys_lectura PRIMARY KEY (id)
+);
