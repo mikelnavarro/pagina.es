@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <!-- Menu Página -->
+    <nav>
+        <ul class="menu">
+            <li class="nav-item"><a href="#Inicio">Inicio</a></li>
+            <li class="nav-item"><a href="#Servicios">Servicios</a></li>
+            <li class="nav-item"><a href="#Datos">Datos</a></li>
+            <li class="nav-item"><a href="#Contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <header>
+
+        <h2>Bienvenido a mi maravillosa web</h2>
+        <h5>¡¡¡SORPRESA!!!</h5>
+        <button id="verservicios">Ver Servicios</button>
+    </header>
+    <main>
+    <div id="Servicios">
+        <h2>Nuestros Servicios</h2></div>
+        <div id="articles">
+            <article id="service">
+                <h4>Servicio</h4>
+                <p>Nuestro servicio...</p>
+            </article>
+            <article id="service">
+                <h4>Servicio</h4>
+                <p>Nuestro servicio...</p>
+            </article>
+            <article id="service">
+                <h4>Servicio</h4>
+                <p>Nuestro servicio...</p>
+            </article>
+        </div>
+    
+        <article id="Datos">
+            <h2>Tabla de Ejemplo</h2>
+            <table>
+                <tr id="encabezado">
+                    <th id="primeraColumna">Servicios</th>
+                    <th>Incluye</th>
+                    <th>Precios</th>
+                    <th>Precio Mensual</th>
+                </tr>
+                <tr>
+                    <td id="primeraColumna">S1E</td>
+                    <td>Muchos servicios</td>
+                    <td>4.55</td>
+                    <td>0.0</td>
+                </tr>
+                <tr>
+                    <td id="primeraColumna">S1E Basic</td>
+                    <td>Dato 6</td>
+                    <td>5.55</td>
+                    <td>3</td>
+
+                </tr>
+                <tr>
+                    <td id="primeraColumna">S1E Premium</td>
+                    <td>Servicios web</td>
+                    <td>7</td>
+                    <td>4.99</td>
+
+                </tr>
+                <tr id="ultimaFila">
+                    <td id="primeraColumna">S2EE Premium</td>
+                    <td>Datos</td>
+                    <td>29.99</td>
+                    <td>4.99</td>
+                </tr>
+            </table>
+        </article>
+        <div id="Contacto" class="form">
+            <h1>Datos</h1>
+            <form action="#" method="#">
+                <label for="nombre">Nombre: </label><br><br>
+                <input type="text" id="nombre" name="nombre" 
+                pattern="[A-Za-z]">
+                <label for="apellido">Apellido: </label>
+                <input type="text" id="apellido" name="apellido" required>
+            
+                <!-- Campo del DNI -->
+                <label for="nif">DNI (NIF): </label>
+                <input type="text" id="nif" name="nif"
+                pattern="[0-9]{8}[A-Z]{1}"
+                title="Debe poner 8 números y una letra" maxlength="9" minlength="9"><br><br>
+                <input type="submit" value="Enviar Datos">
+            </form>
+
+
+    </main>
+    <footer> 
+        <div>&copy;    2025 |    Mikel     | Todos los derechos.</div>
+    </footer>
+</body>
+
+</html>
