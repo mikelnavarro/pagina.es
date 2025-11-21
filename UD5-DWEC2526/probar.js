@@ -38,4 +38,3 @@ function moverLaPalabra(){
     elemento.style.left = Math.floor(randomX) + "px";
     elemento.classList.add("elemento");
 }
-moverLaPalabra();
