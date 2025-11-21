@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-column: 4;
+    grid-row: 4;
+    background-color: rgba(142, 255, 255, 0.759);
+    font-family: 'Arial';
+    font-size: medium;
+}
+
+form {
+    display: flex;
+    grid-row-start: 4;
+    flex-direction: row;
+    margin: column;
+    justify-content: left;
+    align-items: center;
+    border-style: none;
+    border-radius: 2px;
+}
+
+label {
+    margin: 5px;
+    font-style: italic;
+}
+
+#password, #user {
+    margin: 4px;
+    padding: 6px;
+    border-radius: 0.2rem;
+    background-color: white;
+}
+
+#submit {
+    margin: 4px;
+    background-color: blue;
+    color: black;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+}
+
+#submit:hover {
+    background-color: darkslateblue;
+    transition: 0.46s;
+}

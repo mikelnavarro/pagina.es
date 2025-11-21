@@ -1,0 +1,18 @@
+{
+    "name": "mikel/ud_3",
+    "description": "Proyecto para la Unidad 3 DWES",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Mikel\\Ud3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mikel Navarro"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^7.0"
+    }
+}

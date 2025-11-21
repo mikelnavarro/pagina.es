@@ -1,6 +1,7 @@
 <?php
 namespace Mikel;
-require_once '../tools/Conexion.php';
+require "../"
+require "../tools/Conexion.php";
 require "../vendor/autoload.php";
 
 class GestorLectura implements AccionesBD {

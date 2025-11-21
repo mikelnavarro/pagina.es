@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="procesar_post.php" enctype="multipart/form-data" method="POST"> 
+        <label for="pelicula">Película: </label>
+        <input type="text" id="pelicula" name="pelicula"><br><br>
+        <label for="duracion">Duración: </label>
+        <input type="number" id="duracion" name="duracion"><br><br>
+        <label for="area">Área: </label>
+        <input type="text" id="area" name="area"><br><br>
+        <label for="lugar">Lugar: </label>
+        <input type="text" id="lugar" name="lugar"><br><br>
+        <label for="horas">Horas: </label>
+        <input type="number" id="horas" name="horas"><br><br>
+
+
+        <!-- Ficheros -->
+        <label for="fichero">Archivos: </label>
+        <input type="file" id="fichero" name="fichero" value="Subir fichero"><br><br>
+
+        <input type="submit" value="Enviar">
+        <!-- Parametro oculto para verificar que se ha enviado -->
+        <input type="hidden" name="enviado" value="1">
+        <!-- Campo Comprobacion de Envio -->
+        
+        <p name="Comprobacion"></p>
+
+    </form>
+</body>
+
+</html>

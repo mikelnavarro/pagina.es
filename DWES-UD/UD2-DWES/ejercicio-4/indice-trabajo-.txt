@@ -1,0 +1,16 @@
+Las clases creadas por cada ejercicio:
+
+Abstracta - Hobby.php (implementa interfaz Acciones)
+	Extiende clases:
+	Lectura.php
+	Cine.php
+	Musica.php
+
+Clases:
+Interfaz - Acciones.php
+Ayuda.php
+
+Clases principales:
+ (El fichero indice.php contiene algunos ejercicios de los enunciados como ejemplos o pruebas.)
+-index.php
+

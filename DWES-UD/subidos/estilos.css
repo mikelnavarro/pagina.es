@@ -1,0 +1,78 @@
+    body {
+        margin: 0;
+        font-family: sans-serif;
+    }
+
+    header {
+        background: #4a90e2;
+        color: white;
+        text-align: center;
+        padding: 3rem;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .card {
+        background: #f4f4f4;
+        padding: 1rem;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+
+    footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    .socialmedia img {
+        display: grid;
+        grid-column-start: 5;
+        width: 14%;
+    }
+    .navbar-brand img {
+        width: 4%;
+    }
+    .socialmedia p {
+        display: grid;
+        grid-column-start: 6;
+        font-weight: bold;
+    }
+
+    .container img {
+        width: 100%;
+        border-radius: 0.8rem;
+    }
+
+    form {
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+    }
+
+
+    .carousel {
+        height: 65%;
+        border-radius: 0.2rem;
+        font-size: 1rem;
+    }
+    #DemoCarousel img {
+        max-height: 700px;
+        object-fit: cover;
+        border-radius: 0.2rem;
+    }
+
+    .carousel-caption:hover {
+        transition: 0.6s;
+        cursor: pointer;
+        font-size: 3.3rem;
+    }
