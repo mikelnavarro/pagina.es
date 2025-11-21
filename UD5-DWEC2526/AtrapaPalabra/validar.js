@@ -9,8 +9,9 @@ const arrayUsuarios = storage.load() || [];
 inciarSesion.addEventListener("submit", (event) => {
   event.preventDefault(); // Previene por defecto
 
+  
   // validarPassword();
-  validateUsername();
+  // validateUsername();
 
   const inputUser = username.value;
   const inputPassword = password.value;
@@ -18,15 +19,17 @@ inciarSesion.addEventListener("submit", (event) => {
   // Valida
   arrayUsuarios.forEach((element) => {
     if (username.value == element.name.value) {
-      return;
+      return "atrapar.html";
+    } else if (username == "user" && password == "password") {
+      return "atrapar.html";
     } else if (username.value !== element.name.value) {
       const user = new User(inputUser, inputPassword);
       arrayUsuarios.push(user); // Se introduce en el Array
       storage.save(arrayUsuarios);
+      window.location = "atrapar.html";
     }
   });
 });
-
 /* Funcion de validacion user */
 function validateUsername() {
   if (username.value.length == 0) {

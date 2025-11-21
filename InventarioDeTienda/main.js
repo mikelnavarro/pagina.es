@@ -9,7 +9,6 @@ const DivProducto = document.getElementById("producto-individual");
 const buttonLimpiarLocal = document.getElementById("limpiarLocal");
 const sectionTotal = document.getElementById("total");
 
-
 let arrayProductos = [];
 const cart = [];
 const cartObs = new CartObserver();
@@ -20,6 +19,7 @@ function addToCart(producto){
     cart.push(producto);
     const total = cart.reduce((s, p) => s + p.precioConIVA, 0);
     cartObs.notify(total);
+    cargarEnLocalStorage();
     mostrarProductos(producto);
 }
 function cargarEnLocalStorage() {
@@ -105,7 +105,7 @@ function agregarProducto(nombre, precioBase, categoria) {
   producto.formatearFechaCreacion();
   producto.calcularPrecioIVA();
   arrayProductos.push(producto);
-  guardarEnLocalStorage();
+  guardarEnLocalStorage();  
   mostrarProductos();
 }
 
@@ -119,7 +119,6 @@ function borrarProducto() {
     if (p.generarCodigoProducto()) {
       arrayProductos.pop(p.generarCodigoProducto());
     }
-
   });
 }
 buttonLimpiarLocal.addEventListener("click", function (e) {
