@@ -47,6 +47,7 @@ if (isset($_GET["action"]) && $_GET["action"] === "borrar" && isset($_GET["id"])
                 <th>ID</th>
                 <th>Título</th>
                 <th>Autor</th>
+                <th>Número de Páginas</th>
                 <th>Año Publicación</th>
                 <th>Acciones</th>
             </tr>
