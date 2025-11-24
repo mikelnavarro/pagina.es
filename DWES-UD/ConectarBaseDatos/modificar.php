@@ -3,13 +3,11 @@ require_once 'Libro.php';
 $libro = new Libro();
 $id = $_GET['id'];
 // Comprobamos el id
-if ($id) {
-    $libro_actual = null;
-    $libro_actual = $libro->listar();
+if (isset($id)) {
+    $libro_actual = $libro->getID($id);
     if (!$libro_actual) {
         echo "Libro No encontrado";
-    }
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["action"] == "modificar") {
+    } else if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["action"] == "modificar") {
         $datos = [
             "id" => $_POST['id'],
             "titulo" => $_POST["titulo"],
@@ -40,17 +38,15 @@ if ($id) {
         <label for="id">Id: </label>
         <input type="number" id="id" name="id" value="<?= $libro_actual["id"] ?>"><br>
         <label for="titulo">Título: </label>
-        <input type="text" id="titulo" name="titulo" value="<?= $libro_actual["titulo"] ?>"><br>
+        <input type="text" id="titulo" name="titulo" value=""><br>
         <label for="autor">Autor: </label>
-        <input type="text" id="autor" name="autor" value="<?= htmlspecialchars($libro_actual["autor"]) ?>"><br>
+        <input type="text" id="autor" name="autor" value=""><br>
         <label for="n_paginas">Número de Paginas: </label>
-        <input type="number" id="n_paginas" name="n_paginas" value="<?= $libro_actual["n_paginas"] ?>"><br>
+        <input type="number" id="n_paginas" name="n_paginas" value=""><br>
         <label for="fecha_publicacion">Fecha de publicacion: </label>
-        <input type="date" id="fecha_publicacion" name="fecha_publicacion"
-            value=" <?php echo $libro_actual["fecha_publicacion"] ?>"><br>
+        <input type="date" id="fecha_publicacion" name="fecha_publicacion" value=""><br>
         <label for="terminado">¿Se lo ha terminado?</label>
-        <input type="checkbox" id="terminado" name="terminado"
-            value="<?php $libro_actual["terminado"] ? "checked" : "" ?>"><br>
+        <input type="checkbox" id="terminado" name="terminado" value=""><br>
         <input type="hidden" name="action" value="modificar">
         <input type="hidden" name="id" value="<?php echo isset($_GET["id"]) ? htmlspecialchars($_GET["id"]) : ""; ?>">
         <input type="submit" value="Editar">
