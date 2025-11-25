@@ -47,17 +47,15 @@ if ($libro_actual) {
             width: 95%;
             border-style: none;
         }
-        thead, th {
+        th {
             display: flex;
-            flex-direction: column;
-            justify-items: center;
+            align-items: right;
             padding: 6px;
             border: 2px solid black;
-            width: 75%;
         }
-        tbody, td {
+        td {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             border: 2px solid black;
             padding: 6px;
 
