@@ -1,0 +1,17 @@
+{
+    "name": "mikelnavarro/ev_ud",
+    "description": "Ev Prueba",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Mikelnavarro\\EvUd\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mikel",
+            "email": "mikelnaval2006@gmail.com"
+        }
+    ],
+    "require": {}
+}
