@@ -24,33 +24,34 @@ if (isset($_GET["action"]) && $_GET["action"] === "borrar" && isset($_GET["id"])
     <meta charset="UTF-8">
     <title>Listado de mascotas</title>
     <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
 
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
 
-        th {
-            background-color: #f2f2f2;
-        }
+    th {
+        background-color: #f2f2f2;
+    }
 
-        img {
-            max-width: 130px;
-            height: auto;
-        }
-        a {
-            text-decoration: none;
-            background-color: blue;
-            color: white;
-            padding: 4px;
-            width: 100%;
-        }
+    img {
+        max-width: 130px;
+        height: auto;
+    }
+
+    a {
+        text-decoration: none;
+        background-color: blue;
+        color: white;
+        padding: 4px;
+        width: 100%;
+    }
     </style>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="estilo.css">
@@ -66,7 +67,7 @@ if (isset($_GET["action"]) && $_GET["action"] === "borrar" && isset($_GET["id"])
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Tipo</th>
-                <th>Fecha de Nacimiento<n /th>
+                <th>Fecha de Nacimiento</th>
                 <th>Imagen</th>
                 <th>Foto URL</th>
                 <th>Acciones</th>

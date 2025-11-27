@@ -18,7 +18,7 @@ class GestorMascotas
 	{
 
 		try {
-			$sql = "SELECT id, nombre, tipo, fecha_nacimiento, foto_url, id_persona FROM mascotas";
+			$sql = "SELECT * FROM mascotas";
 			$stmt = $this->conexion->prepare($sql);
 			$stmt->bindParam("id", $id, PDO::PARAM_INT);
 			$stmt->execute();
@@ -32,13 +32,13 @@ class GestorMascotas
 		$sql = "UPDATE mascotas SET nombre=:nombre,tipo=:tipo,fecha_nacimiento=:fecha_nacimiento,foto_url=:foto_url,id_persona=:id_persona WHERE id=:id";
 		$stmt = $this->conexion->prepare($sql);
 		$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
-		if ($stmt->execute(array(
+		return $stmt->execute(array(
 			":nombre" => $datos["nombre"],
 			":tipo" => $datos["tipo"],
 			":fecha_nacimiento" => $datos["fecha_nacimiento"],
 			":foto_url" => $datos["foto_url"],
-			":id_persona" => $datos["id_persona"]
-		)));
+			":id_persona" => $datos["id_persona"],
+		));
 	}
 
 	public function responsable($responsable)
