@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Productos - JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" type="module"></script>
+</head>
+<body>
+    <main class="principal">
+        <form id="formProductos" method="" action="">
+            
+            <h2>Formulario Producto</h2>
+            <hr><hr>
+            
+            <label for="nombre">Producto: </label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="pais">País: </label>
+            <input type="text" id="pais" name="pais" required>
+            
+            <label for="PrecioBase">Precio Base: </label>
+            <input type="number" id="PrecioBase" name="PrecioBase" required>
+
+            <label for="IVA">I.V.A: </label>
+            <input type="text" id="IVA" name="IVA">
+
+            <label for="discount">DESCUENTO: </label>
+            <select id="discount" name="discount">
+                <option value="25">25 %</option>
+                <option value="15">15 %</option>
+                <option value="5">5 %</option>
+            </select>
+
+            <input type="submit" id="Submit" value="Crer producto">
+        </form>
+    </main>
+</body>
+</html>
