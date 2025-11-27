@@ -1,6 +1,5 @@
 <?php
-namespace Mikelnavarro\EvUd;
-require_once "Libro.php";
+require_once '../src/Libro.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $libro = new Libro();
     $datos = array(

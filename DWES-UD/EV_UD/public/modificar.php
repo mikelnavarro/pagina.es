@@ -1,6 +1,6 @@
 <?php
-namespace Mikelnavarro\EvUd;
-require_once 'Libro.php';
+
+require_once '../src/Libro.php';
 $libro = new Libro();
 $id_libro = null;
 // Comprobamos el id

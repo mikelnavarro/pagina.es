@@ -1,6 +1,5 @@
 <?php
-namespace Mikelnavarro\EvUd;
-require_once "Libro.php";
+require_once '../src/Libro.php';
 $libro = new Libro();
 $libro_actual = null;
 if (isset($_GET['id'])) {

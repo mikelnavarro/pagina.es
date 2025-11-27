@@ -19,38 +19,43 @@ if (isset($_GET["action"]) && $_GET["action"] === "borrar" && isset($_GET["id"])
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Listado de mascotas</title>
     <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
 
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
 
-    table {
-    border-collapse: collapse;
-    width: 100%;
-}
+        th {
+            background-color: #f2f2f2;
+        }
 
-th,
-td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-a {
-    text-decoration: none;
-    background-color: blue;
-    color: white;
-    padding: 4px;
-    width: 100%;
-}
+        img {
+            max-width: 130px;
+            height: auto;
+        }
+        a {
+            text-decoration: none;
+            background-color: blue;
+            color: white;
+            padding: 4px;
+            width: 100%;
+        }
     </style>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
     <h2>Lista de mascotas</h2>
     <a href="../Logout.php">Cerrar sesion</a>
@@ -61,7 +66,8 @@ a {
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Tipo</th>
-                <th>Fecha de Nacimiento<n/th>
+                <th>Fecha de Nacimiento<n /th>
+                <th>Imagen</th>
                 <th>Foto URL</th>
                 <th>Acciones</th>
             </tr>
@@ -76,16 +82,18 @@ a {
                 echo "<td>" . htmlspecialchars($row["nombre"]) . "</td>";
                 echo "<td>" . htmlspecialchars($row["tipo"]) . "</td>";
                 echo "<td>" . htmlspecialchars($row["fecha_nacimiento"]) . "</td>";
+                echo '<td><img src="' . $row['foto_url'] . '" alt="Foto"></td>';
                 echo "<td>" . htmlspecialchars($row["foto_url"]) . "</td>";
-            echo "<td>";
-            echo "<a id=Editar href='modificar.php?action=modificar&id=" . htmlspecialchars($row['id']) . "'>Editar</a> | ";
-            echo "<a id=Borrar href='principal.php?action=borrar&id=" . htmlspecialchars($row['id']) . "'>Borrar</a>";
-            echo "</td>";
-            echo "</tr>";
+                echo "<td>";
+                echo "<a id=Editar href='modificar.php?action=modificar&id=" . htmlspecialchars($row['id']) . "'>Editar</a> | ";
+                echo "<a id=Borrar href='principal.php?action=borrar&id=" . htmlspecialchars($row['id']) . "'>Borrar</a>";
+                echo "</td>";
+                echo "</tr>";
             }
             ?>
         </tbody>
     </table>
-<a href="registro.php">Registrar una Mascota</a>
+    <a href="registro.php">Registrar una Mascota</a>
 </body>
+
 </html>

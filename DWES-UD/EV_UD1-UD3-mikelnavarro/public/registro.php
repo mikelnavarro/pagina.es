@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"]==="POST"){
     $name = $_FILES["foto"]["name"];
 
     $ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
-    $dir = dirname(__FILE__) . "/uploads/";
+    $dir = "../public/img/";
     $destino = $dir . $name;
 	$datos = array(
         "nombre"=>$_POST["nombre"],
@@ -54,7 +54,7 @@ function subirArchivos(){
     Tipo MIME de PDF: (application/pdf)
     */
     // --- COMPROBAR SI EXISTE ---
-    $dir = dirname(__FILE__) . "/subidos/";
+    $dir = dirname(__FILE__) . "/img/";
     $destino = $dir . $name;
 
 

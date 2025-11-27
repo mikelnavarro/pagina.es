@@ -1,7 +1,8 @@
 <?php
+require '../src/Libro.php';
+require __DIR__ . '/../vendor/autoload.php';
 // Incluye el archivo de la clase
-namespace Mikelnavarro\EvUd;
-require_once "Libro.php";
+
 // Instancia la clase Libro
 $libro = new Libro();
 

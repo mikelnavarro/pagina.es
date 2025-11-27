@@ -17,7 +17,7 @@ class Login {
 	// Base de datos
 	public function comprobarUsuario($username,$password){
 	try {
-		$sql = "SELECT username, password FROM usuarios WHERE username = :username, password = :password";
+		$sql = "SELECT username, password FROM usuarios WHERE username = :username AND password = :password";
 		if ($stmt = $this->conexion->prepare($sql)){
 		$stmt->bindParam(":username",$username);
 		$stmt->bindParam(":password",$password);

@@ -1,11 +1,12 @@
 <?php
-namespace Mikelnavarro\EvUd;
+
+require '../vendor/autoload.php';
 class Conexion
 {
     private $servername = "localhost";
     private $username = "dweb";
     private $password = "12345";
-    private $bd = "actividad_hobbys"; // Base de datos cambiada
+    private $bd = "dweb"; // Base de datos cambiada
     public $conexion;
 
     public function __construct()

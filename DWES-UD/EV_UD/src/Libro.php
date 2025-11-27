@@ -1,5 +1,4 @@
 <?php
-namespace Mikelnavarro\EvUd;
 require_once 'Conexion.php';
 class Libro
 {
