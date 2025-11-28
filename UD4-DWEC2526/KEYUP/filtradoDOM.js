@@ -23,8 +23,6 @@ categoriaFilter.addEventListener("change", function (event) {
   );
 
   DOMFacade.mostrar(filtrados);
-
-  
   // Filtrado
   resultado.textContent = `Te gusta el sabor ${event.target.value}`;
 });
