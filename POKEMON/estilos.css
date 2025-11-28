@@ -1,0 +1,170 @@
+* {
+    font-family: "Arial";
+}
+body {
+    font-family: 'Arial';
+    font-weight: 600;
+    color: #f87849;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: 0;
+    width: 100%;
+    max-width: 1000px;
+}
+#formPokemon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    box-sizing: border-box;
+}
+label {
+    max-width: 230px;
+    height: auto;
+    font-weight: bolder;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+input[type="text"],
+input[type="number"],
+select {
+    flex-grow: 1;
+    min-width: 100px;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #f87849;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+select:focus,select:hover{
+    outline: none;
+    border-color: #f87849;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+#anadirPokemon {
+    flex-basis: 100%;
+    padding: 10px;
+    background-color: orange;
+    border-style: none;
+    border-radius: 6%;
+    font-weight: 600;
+    color: white;
+}
+#anadirPokemon:hover {
+    cursor: pointer;
+    background-color: rgb(209, 137, 4);
+}
+hr {
+    color: orange;
+    border: 1px solid orange;
+}
+.estadisticasPokemon {
+    border: 1px solid grey;
+    border-radius: 5%;
+    gap: 2em;
+    display: flex;
+    flex-direction: column;
+    background-color: #e0dfdf;
+    padding: 15px;
+}
+.botones {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    justify-content: center;
+    padding: 15px;
+}
+.botones button {
+    padding: 15px;
+    height: auto;
+    width: 40%;
+    border-style: none;
+    background-color: orange;
+    font-weight: bolder;
+    color: white;
+    border-radius: 5%;
+    box-shadow: 3px 3px 3px slategrey;
+}
+.botones button:hover {
+    cursor: pointer;
+}
+#campoBuscar {
+    padding: 10px;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+#estadisticaFuego, #estadisticaPlanta, #estadisticaAgua {
+    padding: 20px;
+    width: 100%;
+    background-color: #ccc;
+    font-weight: bolder;
+    border-radius: 3%;
+    border: 1px solid rgb(76, 76, 76);
+    box-sizing: border-box;
+}
+.lista-pokemon {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 20px 0;
+}
+.card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+    font-weight: normal;
+    color: #333;
+    box-sizing: border-box;
+    justify-content: left;
+}
+
+@media (max-width: 600px) {
+    #formPokemon {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    label {
+        width: 100%;
+        margin-top: 10px;
+        height: auto;
+    }
+    input[type="text"],
+    input[type="number"],
+    select,
+    #anadirPokemon {
+        width: 100%;
+    }
+    .botones {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .botones button {
+        width: 100%;
+    }
+    #campoBuscar {
+        width: 90%;
+    }
+}

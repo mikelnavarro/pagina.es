@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Búsqueda Evento KEYUP</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="filtradoDOM.js" type="module"></script>
+    <script src="borradoLocal.js" type="module"></script>
+    <script src="main.js" type="module"></script>
+  </head>
+
+  <body>
+    <main>
+      <h1>TiendaTec</h1>
+      <h2>Registro de producto</h2>
+      <form id="form-producto">
+        <input type="text" id="nombre" placeholder="Nombre del producto" />
+        <input type="number" id="precio" placeholder="Precio" />
+        <label>Descuento:</label>
+        <select id="descuento">
+          <option value="0">Sin descuento</option>
+          <option value="0.10">10%</option>
+          <option value="0.15">15%</option>
+          <option value="0.25">25%</option>
+          <option value="0.50">50%</option>
+        </select>
+        <input type="submit" value="Añadir Producto" />
+      </form>
+      <input type="text" id="busqueda" placeholder="Buscar producto..." />
+      <div id="listaproductos"></div>
+      <button id="borrarTodo">Borrar todos</button>
+    </main>
+  </body>
+</html>

@@ -29,6 +29,7 @@ function renderProducto(product) {
     const discountPercent = (product.discount * 100).toFixed(0);
     const listaTotal = document.getElementById("producto-lista");
     const div = document.createElement("div");
+    div.classList.add("producto-lista");
     div.innerHTML = 
             `<p>${product.name}</p>
             <p>Precio sin IVA: ${product.price}</p>

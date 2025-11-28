@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex Comercio</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="app.js" type="module"></script>
+  </head>
+  <body>
+    <main class="principal">
+      <!-- Formulario para introducir Pokemon -->
+      <form id="formPokemon" method="" action="">
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" name="nombre" />
+        <label for="tipo">Tipo: </label>
+        <select id="tipo">
+          <option value="fuego">Fuego</option>
+          <option value="agua">Agua</option>
+          <option value="planta">Planta</option>
+        </select>
+        <label for="nivel">Nivel: </label>
+        <input type="number" id="nivel" name="nivel" />
+        <input type="submit" id="anadirPokemon" value="Añadir Pokemon" />
+      </form>
+      <!-- Estadísticas Pokémon -->
+
+      <div class="estadisticasPokemon">
+        <h3>Estadísticas</h3>
+        <hr id="line-estadistica" />
+        <section id="estadisticaFuego"></section>
+        <section id="estadisticaAgua"></section>
+        <section id="estadisticaPlanta"></section>
+      </div>
+      <article class="botones">
+        <button id="generarEstadisticas">Generar estadísticas</button>
+        <button id="borrarTodos">Borrar todos los Pokémon</button>
+      </article>
+      <!-- Sección para mostrar Pokémon -->
+
+      <h3>Lista de Pokémon</h3>
+      <hr id="line-estadistica" />
+      <input type="text" id="campoBuscar" value="Buscar por nombre o tipo..." />
+      <section class="lista-pokemon" id="lista-pokemon">
+        <div class="individual"></div>
+      </section>
+    </main>
+  </body>
+</html>

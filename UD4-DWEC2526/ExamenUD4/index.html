@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos.css" />
     <script src="app.js" type="module"></script>
 </head>
+
 <body>
     <h1>Registrar nuevo Pokémon</h1>
     <main>
+        <!-- Formulario de Pokemon -->
         <form id="formularioPokemon">
-        <label for="nombre">Nombre: </label>
-        <input type="text" id="nombre" name="nombre">
-        <label for="tipo">Tipo: </label>
-        <select id="tipoSelect">
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" name="nombre" />
+            <label for="tipo">Tipo: </label>
+            <!-- Seleccionar el tipo (Agua, Fuego, Planta...)-->
+            <select id="tipoSelect">
                 <option value="agua">Agua</option>
                 <option value="planta">Planta</option>
                 <option value="fuego">Fuego</option>
             </select>
-        <label for="nivel">Nivel: </label>
-        <input type="number" id="nivel" name="nivel">
-        <input type="submit" id="Submit" value="Añadir Pokémon">
-        </form>    
-    <h2>Estadisticas</h2>
-    <hr style="color:red" class="linea-roja">
-    <article class="lista-estadistica">
-        <section class="fuego"></section>
-        <section class="planta"></section>
-        <section class="agua"></section>
-    </article>
-    <button id="estadisticas">Generar estadísticas</button>
-    <button id="borrarTodos">Borrar todos los Pokémon</button>
-    <h2>Lista de Pokemon</h2>
-    <hr style="color:red" class="linea-roja">
+            <label for="nivel">Nivel: </label>
+            <input type="number" id="nivel" name="nivel" />
+            <input type="submit" id="Submit" value="Añadir Pokémon" />
+        </form>
+        <!-- Estadísticas de Pokemon introducidos -->
+        <h2>Estadisticas</h2>
+        <hr style="color: red" class="linea-roja" />
+        <article class="lista-estadistica">
+            <section class="fuego"></section>
+            <section class="planta"></section>
+            <section class="agua"></section>
+        </article>
+        <button id="estadisticas">Generar estadísticas</button>
+        <!-- Botón que permite BORRAR todos los Pokemon introducidos -->
+        <button id="borrarTodos">Borrar todos los Pokémon</button>
+        <!-- Lista de Pokemon introducidos -->
+        <h2>Lista de Pokemon</h2>
+        <hr style="color: red" class="linea-roja" />
         <div class="busqueda"></div>
         <article id="lista-pokemon">
-            <div id="pokemon-individual">
-            </div>
-        </article></main>
-
-
+            <div id="pokemon-individual"></div>
+        </article>
+    </main>
 </body>
+
 </html>
