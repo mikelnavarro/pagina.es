@@ -1,0 +1,17 @@
+{
+    "name": "mikelnavarro/ej_bbdd",
+    "description": "Proyecto ejercicio bbdd",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Mikelnavarro\\EjBbdd\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mikel",
+            "email": "mikelnaval2006@gmail.com"
+        }
+    ],
+    "require": {}
+}

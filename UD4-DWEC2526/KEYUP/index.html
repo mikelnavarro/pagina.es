@@ -12,11 +12,20 @@
 
   <body>
     <main>
-      <h1>TiendaTec</h1>
-      <h2>Registro de producto</h2>
+      <span><strong>TiendaTec</strong></span>
+
+      <!-- Registro de Producto -->
+      <span>Registro de producto</span>
+      <!-- FORMULARIO Registro -->
       <form id="form-producto">
         <input type="text" id="nombre" placeholder="Nombre del producto" />
         <input type="number" id="precio" placeholder="Precio" />
+        <label>Categoría:</label>
+        <select id="categoria">
+          <option value="tecnologia">Tecnología</option>
+          <option value="higiene">Higiene</option>
+          <option value="alimentacion">Alimentación</option>
+        </select>
         <label>Descuento:</label>
         <select id="descuento">
           <option value="0">Sin descuento</option>

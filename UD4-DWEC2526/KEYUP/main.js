@@ -11,14 +11,14 @@ formulario.addEventListener("submit", function (e) {
   e.preventDefault();
   const nombre = document.getElementById("nombre").value;
   const precio = document.getElementById("precio").value;
+  const categoria = document.getElementById("categoria").value;
   const descuento = parseFloat(document.getElementById("descuento").value);
 
-  let product = new ProductFactory(nombre, precio);
-  // Añadimos el descuento
-  // product.descuento = applyDiscount(product,descuento);
+  let product = new ProductFactory.create(nombre,precio,categoria,descuento);
+  
+  product.calcularPrecioFinal();
+  product.generarCodigo();
   arrayProductos.push(product);
   storage.save(arrayProductos);
   DOMFacade.mostrar(arrayProductos);
-
 });
-

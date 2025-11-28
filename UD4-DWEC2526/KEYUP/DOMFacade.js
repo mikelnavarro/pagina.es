@@ -1,3 +1,5 @@
+import { ProductFactory } from "./ProductFactory.js";
+
 export const DOMFacade = {
   // Mostrar Elementos
   mostrar(arrayProductos) {
@@ -14,10 +16,10 @@ export const DOMFacade = {
       div.classList.add("producto-card");
       div.innerHTML = `<h5>${product.name}</h5>
             <p>Precio sin IVA: ${product.price} $</p>
-            <p>Fecha: ${product.fechaProducto} </p>
-            <p>Horas: ${product.horaProducto} h. </p>
+            <p>Categoría: ${product.categoria}</p>
+            <p>Fecha: ${product.fechaCreacion} </p>
             <p>Precio final: ${product.finalPrice} $ </p>
-            <p>ID: ${product.id}</p><br>`;
+            <p>ID: ${product.codigo}</p><br>`;
       listaproductos.appendChild(div);
     });
   },
