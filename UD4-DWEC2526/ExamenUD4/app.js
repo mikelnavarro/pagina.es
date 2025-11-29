@@ -1,35 +1,35 @@
-import { Pokemon } from './Pokemon.js';
-import { GuardarPokemon } from './Storage.js';
+import { Pokemon } from "./Pokemon.js";
+import { GuardarPokemon } from "./Storage.js";
 
-const formulario = document.getElementById("formularioPokemon");
+
+// VARIABLES
+const formulario = document.getElementById("formPokemon");
 const storage = new GuardarPokemon();
 const listaPokemon = document.getElementById("lista-pokemon");
 const buttonLimpiarLocal = document.getElementById("borrarTodos");
-const filtrado = document.getElementById("busqueda");
-
-
-
+const busqueda = document.getElementById("campoBuscar");
 
 let arrayPokemon = storage.load() || [];
+// FORMULARIO
 formulario.addEventListener("submit", (e) => {
     e.preventDefault();
     const nombreInput = document.getElementById("nombre").value;
-    const tipoInput = document.getElementById("tipoSelect").value;
+    const tipoInput = document.getElementById("tipo").value;
     const nivelInput = document.getElementById("nivel").value;
 
-
     if (!nombreInput) return alert("Debe completar el campo Titulo.");
-    addPokemon(nombreInput,tipoInput,nivelInput);
+    addPokemon(nombreInput, tipoInput, nivelInput);
 });
 
-/* Función Añadir */
+// Función de añadir un pokémon
 function addPokemon(nombre, tipo, nivel) {
     const pokemon = new Pokemon(nombre, tipo, nivel);
     arrayPokemon.push(pokemon);
     storage.save(arrayPokemon);
-    mostrarElementos();
+    mostrarElementos(arrayPokemon);
 }
-function mostrarElementos() {
+// Función de mostrar los elementos
+function mostrarElementos(arrayPokemon) {
     listaPokemon.innerHTML = "";
     if (arrayPokemon.length === 0) {
         listaPokemon.innerHTML = "<p>No hay productos a mostrar.</p>";
@@ -47,23 +47,17 @@ function mostrarElementos() {
         const ptitle = div.querySelector(".ptitle");
     });
 }
+// Botón que limpia todo
 buttonLimpiarLocal.addEventListener("click", function () {
     storage.remove(arrayPokemon);
-    storage.load();
-    mostrarElementos();
 });
-
-/*
-filtrado.addEventListener("keyup", function (e) {ç
-    e.preventDefault();
-    const tipo = filterPriority.value;
-    mostrarElementos(pok => {
-        if (tipo === "") return true;
-        return pok.tipo === tipo;
-    });
+// Búsqueda
+busqueda.addEventListener("keyup", function (event) {
+    const texto = event.target.value.toLowerCase();
+    const filtrados = arrayPokemon.filter((pk) =>
+        pk.nombre.toLowerCase().includes(texto) || pk.tipo.toLowerCase().includes(texto)
+    );
+    mostrarElementos(filtrados);
 });
-
-
-*/
 storage.load();
-mostrarElementos();
+mostrarElementos(arrayPokemon);

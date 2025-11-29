@@ -7,41 +7,45 @@
     <title>Document</title>
     <link rel="stylesheet" href="estilos.css" />
     <script src="app.js" type="module"></script>
+    <script src="generarEstadisticas.js" type="module"></script>
 </head>
 
 <body>
     <h1>Registrar nuevo Pokémon</h1>
     <main>
         <!-- Formulario de Pokemon -->
-        <form id="formularioPokemon">
+        <form id="formPokemon">
             <label for="nombre">Nombre: </label>
             <input type="text" id="nombre" name="nombre" />
             <label for="tipo">Tipo: </label>
             <!-- Seleccionar el tipo (Agua, Fuego, Planta...)-->
-            <select id="tipoSelect">
+            <select id="tipo">
                 <option value="agua">Agua</option>
                 <option value="planta">Planta</option>
                 <option value="fuego">Fuego</option>
             </select>
             <label for="nivel">Nivel: </label>
             <input type="number" id="nivel" name="nivel" />
-            <input type="submit" id="Submit" value="Añadir Pokémon" />
+            <input type="submit" id="anadirPokemon" value="Añadir Pokémon" />
         </form>
-        <!-- Estadísticas de Pokemon introducidos -->
-        <h2>Estadisticas</h2>
-        <hr style="color: red" class="linea-roja" />
-        <article class="lista-estadistica">
-            <section class="fuego"></section>
-            <section class="planta"></section>
-            <section class="agua"></section>
+
+        <!-- Estadísticas de Pokémon -->
+        <article id="estadisticasPokemon" class="estadisticasPokemon">
+            <h3>Estadísticas</h3>
+            <hr style="color: red" class="linea-roja" />
+            <section id="estadisticaFuego"></section>
+            <section id="estadisticaAgua"></section>
+            <section id="estadisticaPlanta"></section>
         </article>
-        <button id="estadisticas">Generar estadísticas</button>
+    <section class="botones">
+        <button id="generarEstadisticas">Generar estadísticas</button>
         <!-- Botón que permite BORRAR todos los Pokemon introducidos -->
         <button id="borrarTodos">Borrar todos los Pokémon</button>
+    </section>
         <!-- Lista de Pokemon introducidos -->
         <h2>Lista de Pokemon</h2>
         <hr style="color: red" class="linea-roja" />
-        <div class="busqueda"></div>
+        <input type="text" id="campoBuscar" value="Buscar por nombre o tipo..." />
         <article id="lista-pokemon">
             <div id="pokemon-individual"></div>
         </article>
