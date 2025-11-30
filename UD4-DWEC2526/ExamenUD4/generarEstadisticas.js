@@ -17,16 +17,20 @@ function mostrarEstadisticas() {
     estadisticaAgua.innerHTML = " ";
     estadisticaFuego.innerHTML = " ";
     estadisticaPlanta.innerHTML = " ";
-    const estadistica = document.createElement("section")
-    estadistica.classList.add("estadistica");
+    const h2 = document.createElement("h2");
+    // Estadisticas Class
+    h2.classList.add("h2");
     estadisticaAgua.classList.add("estadistica");
     estadisticaPlanta.classList.add("estadistica");
     estadisticaFuego.classList.add("estadistica");
+    
+    h2.textContent = `Estadísticas`;
+    estadisticaAgua.innerHTML = `<span><strong>Agua \tPromedio nivel: ${agua}</span>`;
+    estadisticaPlanta.innerHTML = `<span><strong>Planta: \tPromedio nivel: ${planta}</span>`;
+    estadisticaFuego.innerHTML = `<span><strong>Fuego: \tPromedio nivel: ${fuego}</span>`;
 
-    estadisticaAgua.innerHTML = `<span><strong>Agua: ${agua}`;
-    estadisticaPlanta.innerHTML = `<span><strong>Planta: ${planta}`;
-    estadisticaFuego.innerHTML = `<span><strong>Fuego: ${fuego}`;
-    estadisticasPokemon.appendChild(estadistica);
+
+    estadisticasPokemon.appendChild(h2);
     estadisticasPokemon.appendChild(estadisticaAgua);
     estadisticasPokemon.appendChild(estadisticaPlanta);
     estadisticasPokemon.appendChild(estadisticaFuego);
@@ -36,6 +40,7 @@ let fuego = 0;
 let planta = 0;
 
 arrayPokemon.filter((i) => {
+    const nivel = i.nivel;
     const tipo = i.tipo;
     if (tipo == "agua") {
         agua++;
@@ -43,5 +48,14 @@ arrayPokemon.filter((i) => {
         planta++;
     } else if (tipo == "fuego") {
         fuego++;
+    }
+    /* Nivel Estadística */
+    const promedioNivel = 0;
+    if (tipo == "agua") {
+        agua = Math.abs(nivel).toFixed(1);
+    } else if (tipo == "planta") {
+        planta = Math.abs(nivel).toFixed(1);
+    } else if (tipo == "fuego") {
+        fuego = Math.abs(nivel).toFixed(1);
     }
 });

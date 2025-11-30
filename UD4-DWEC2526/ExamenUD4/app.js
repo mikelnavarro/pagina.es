@@ -39,12 +39,11 @@ function mostrarElementos(arrayPokemon) {
         const div = document.createElement("div");
         div.classList.add("card");
         div.innerHTML = `
-            <p class="p-title"><strong>${pokemon.nombre}</strong><p>
+            <h1 class="p-title"><strong>${pokemon.nombre}</strong></h1>
             <p><strong>Tipo: ${pokemon.tipo}</strong></p>
             <p><strong>Nivel: ${pokemon.nivel}</strong></p>
-            <p><strong>Capturado: ${pokemon.formatearFecha()}</strong></p>`;
+            <p>Capturado: ${pokemon.formatearFecha()}</p>`;
         listaPokemon.appendChild(div);
-        const ptitle = div.querySelector(".ptitle");
     });
 }
 // Botón que limpia todo
