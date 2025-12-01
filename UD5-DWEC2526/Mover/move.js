@@ -14,7 +14,7 @@ let dy = -2;
 // Dibuja la pelota
 function drawBall() {
     ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
+    ctx.arc(x, y, 10, 0, Math.PI * 2);
     ctx.fillStyle = "#0095DD";
     ctx.fill();
     ctx.closePath();
@@ -48,9 +48,9 @@ function animarCanvas1() {
 animarCanvas1();
 // --- IMAGEN DOM ---
 const nuevaImagen = document.createElement('img');
-nuevaImagen.src = "../UT5_WEB_Practico/img/Green_Circle.png"; 
+nuevaImagen.src = "../UT5_WEB_Practico/img/Green_Circle.png";
 nuevaImagen.alt = 'Una imagen de la carpeta';
-nuevaImagen.style.position = "absolute"; 
+nuevaImagen.style.position = "absolute";
 document.getElementById("principal").appendChild(nuevaImagen);
 
 // Velocidad de movimiento de la imagen
@@ -81,6 +81,12 @@ const miImagen = new Img("../UT5_WEB_Practico/img/Green_Circle.png", "bola verde
 
 // Animación
 setInterval(() => {
-  miImagen.move(container, 50, 50); // width/height de la imagen
+    miImagen.move(container, 50, 50); // width/height de la imagen
+}, 20);
+
+const imagen2 = new Img("../UT5_WEB_Practico/img/Green_Circle.png", "bola verde", 50, 50, 3, 2);
+const i2 = document.getElementById("imagen1");
+setInterval(() => {
+    imagen2.move(i2, 50, 50);
 }, 20);
 
