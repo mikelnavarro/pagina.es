@@ -29,7 +29,7 @@ export class Img {
     // actualizamos la posicion
     this.img.style.left = this.x + "px";
     this.img.style.top = this.y + "px";
-
+    
     // Añadimos al container si no está
     if (!this.img.parentElement) {
       container.appendChild(this.img);

@@ -47,7 +47,7 @@ function animarCanvas1() {
 }
 animarCanvas1();
 // --- IMAGEN DOM ---
-const nuevaImagen = document.createElement('img');
+// const nuevaImagen = document.createElement('img');
 nuevaImagen.src = "../UT5_WEB_Practico/img/Green_Circle.png";
 nuevaImagen.alt = 'Una imagen de la carpeta';
 nuevaImagen.style.position = "absolute";
@@ -77,16 +77,15 @@ setInterval(moverImagen, 20);
 // --- IMAGE 1 ---
 // Una sola bola
 const container = document.getElementById("imagen1"); // puede ser <main>
-const miImagen = new Img("../UT5_WEB_Practico/img/Green_Circle.png", "bola verde", 50, 50, 3, 2);
+// const miImagen = new Img("../UT5_WEB_Practico/img/Green_Circle.png", "bola verde", 50, 50, 3, 2);
 
 // Animación
 setInterval(() => {
     miImagen.move(container, 50, 50); // width/height de la imagen
 }, 20);
-
-const imagen2 = new Img("../UT5_WEB_Practico/img/Green_Circle.png", "bola verde", 50, 50, 3, 2);
+// const imagen2 = new Img("../UT5_WEB_Practico/img/Green_Circle.png", "bola verde", 50, 50, 4, 4);
 const i2 = document.getElementById("imagen1");
 setInterval(() => {
-    imagen2.move(i2, 50, 50);
+    imagen2.move(i2,50, 50);
 }, 20);
 
