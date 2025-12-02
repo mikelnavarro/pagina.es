@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Foto Mascota</title>
+
+    <link href="css/bootstrap.min_002.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* No modificamos .container de Bootstrap */
+        .form-wrapper {
+            max-width: 700px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container form-wrapper">
+        <div class="row justify-content-center">
+            <div class="col-md-6 mb-4">
+                <div class="card p-4">
+
+                    <h2 class="mb-3">Cambiar Foto</h2>
+
+                    <p><strong>Nombre:</strong> Rampante</p>
+                    <p><strong>Tipo:</strong> tortuga</p>
+                    <p><strong>Fecha de Nacimiento:</strong> 2016-01-19</p>
+
+                    <img src="img/tortuga.jpeg"
+                         alt="Foto de Rampante"
+                         class="img-fluid mb-3"
+                         style="max-width: 200px;">
+
+                    <form action="" method="" enctype="">
+
+                        <input type="hidden" name="id_mascota" value="4">
+
+                        <div class="mb-3">
+                            <label for="nueva_foto" class="form-label">Seleccione nueva foto:</label>
+                            <input type="file" name="nueva_foto" id="nueva_foto" class="form-control">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">
+                            Cambiar Foto
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
