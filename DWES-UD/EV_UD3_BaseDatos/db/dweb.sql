@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.3
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 02-12-2025 a las 15:28:14
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Servidor: localhost
+-- Tiempo de generación: 02-12-2025 a las 16:47:00
+-- Versión del servidor: 8.0.44
+-- Versión de PHP: 8.2.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,10 +28,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `libros` (
-  `id` int(11) NOT NULL,
-  `titulo` varchar(255) DEFAULT NULL,
-  `autor` varchar(255) DEFAULT 'Desconocido',
-  `n_paginas` int(11) DEFAULT 0,
+  `id` int NOT NULL,
+  `titulo` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `autor` varchar(255) COLLATE utf8mb4_general_ci DEFAULT 'Desconocido',
+  `n_paginas` int DEFAULT '0',
   `fecha_publicacion` date DEFAULT '2001-01-01',
   `terminado` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -55,9 +55,9 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `n_paginas`, `fecha_publicacion`,
 --
 
 CREATE TABLE `usuarios` (
-  `id` int(11) NOT NULL,
-  `username` varchar(20) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL
+  `id` int NOT NULL,
+  `username` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -96,13 +96,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `libros`
 --
 ALTER TABLE `libros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
