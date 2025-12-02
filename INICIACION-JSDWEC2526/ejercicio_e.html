@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function checkForm() {
+        var valor = document.getElementById("nombre").value;
+        if (valor == "" || valor == null) {
+          alert("No puede estar vacío");
+          return false;
+        } else return true;
+      }
+    </script>
+    <form action="loquesea.php" id="miform" onsubmit="return checkForm()">
+      Nombre: <input type="text" id="nombre" />
+      <input type="submit" value="Enviar" />
+    </form>
+    <!-- forma ALTERNATIVA a poner el “onsubmit=...” del formulario -->
+    <script type="text/javascript">
+      document.getElementById("miform").onsubmit = checkForm;
+    </script>
+  </body>
+</html>
