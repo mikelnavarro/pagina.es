@@ -6,12 +6,14 @@ class Login
 {
 
 	private $conexion;
+	
 
 	// Constructor
 
 	public function __construct()
 	{
-		$this->conexion = (new Conexion())->conexion;
+        $this->conexion = (new Conexion())->conexion;
+
 	}
 
 

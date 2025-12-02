@@ -27,13 +27,12 @@ class Registro
             echo $exception->getMessage();
         }
     }
-    // Ver perfil
-    public function getUsername() {
-
-    }
-    // Ver ID
-    public function getId(){
-        $sql = "SELECT id FROM usuarios";
-        
+    
+    public function getUsername($usuario){
+        $sql = "SELECT id, username, password FROM usuarios WHERE username = :usuario";
+        $stmt = $this->conexion->prepare($sql);
+        $stmt->bindParam(":usuario",$usuario);
+        $stmt->execute();
+        return $stmt->fetch();
     }
 }

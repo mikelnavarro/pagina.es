@@ -18,4 +18,14 @@ class Conexion
             echo $exception->getMessage();
         }
     }
+    public function getConexion()
+    { {
+            try {
+                $this->conexion = new PDO("mysql:host=$this->servername;dbname=$this->bd", $this->username, $this->password);
+                $this->conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            } catch (PDOException $exception) {
+                echo $exception->getMessage();
+            }
+        }
+    }
 }

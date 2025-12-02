@@ -38,23 +38,24 @@ echo "</pre>";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modificar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="estilosForm.css">
 </head>
 
 <body>
     <form method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">
-        <label for="id">Id: </label>
-        <input type="number" id="id" name="id" value="<?= $libro_actual["id"] ?>"><br>
-        <label for="titulo">Título: </label>
-        <input type="text" id="titulo" name="titulo" value="<?= $libro_actual["titulo"] ?>"><br>
-        <label for="autor">Autor: </label>
-        <input type="text" id="autor" name="autor" value="<?= $libro_actual["autor"] ?>"><br>
-        <label for="n_paginas">Número de Paginas: </label>
-        <input type="number" id="n_paginas" name="n_paginas" value="<?= $libro_actual["n_paginas"] ?>"><br>
-        <label for="fecha_publicacion">Fecha de publicacion: </label>
+        <label class="form-label" for="id">Id: </label>
+        <input type="number" id="id" name="id" value="<?= $libro_actual["id"] ?>" class="form-control"><br>
+        <label class="form-label" for="titulo">Título: </label>
+        <input type="text" id="titulo" name="titulo" value="<?= $libro_actual["titulo"] ?>" class="form-control"><br>
+        <label class="form-label" for="autor">Autor: </label>
+        <input type="text" id="autor" name="autor" value="<?= $libro_actual["autor"] ?>" class="form-control"><br>
+        <label class="form-label" for="n_paginas">Número de Paginas: </label>
+        <input type="number" id="n_paginas" name="n_paginas" value="<?= $libro_actual["n_paginas"] ?>" class="form-control"><br>
+        <label class="form-label" for="fecha_publicacion">Fecha de publicacion: </label>
         <input type="date" id="fecha_publicacion" name="fecha_publicacion"
-            value="<?= $libro_actual["fecha_publicacion"] ?>"><br>
-        <label for="terminado">¿Se lo ha terminado?</label>
+            value="<?= $libro_actual["fecha_publicacion"] ?>" class="form-control"><br>
+        <label class="form-label" for="terminado">¿Se lo ha terminado?</label>
         <input type="checkbox" id="terminado" name="terminado" <?= $libro_actual['terminado'] ? 'checked' : '' ?>><br>
         <input type="hidden" name="action" value="modificar">
         <input type="hidden" name="id" value="<?= $_GET['id'] ? $_GET["id"] : ''; ?>">

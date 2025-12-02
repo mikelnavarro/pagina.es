@@ -6,8 +6,14 @@ require "../src/Login.php";
 $login = new Login();
 // Recibe datos por POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST["username"])) {
-        $usu = $login->comprobarUsuario($_POST["username"], $_POST["clave"]);
+    $username = $_POST["username"] ?? null;
+    $clave = $_POST["clave"] ?? null;
+
+    // Solo si existe username
+    if ($username && $clave) {
+        $usu = $login->comprobarUsuario($username, $clave);
+    } else {
+        $usu = false;
     }
 
     // Comprobamos en el caso que sea falso
@@ -150,16 +156,6 @@ OTRAS FUNCIONALIDADES
 </head>
 
 <body>
-    <header>
-        <nav id="navMenu">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Mascotas</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
     <?php if (isset($_GET["redirigido"])) {
         echo "<p>Haga Login para continuar.</p>";
     }
@@ -169,7 +165,7 @@ OTRAS FUNCIONALIDADES
     }
     ?>
     <div id="loginContainer">
-        <h2>Bienvenido a PetWeb 🐾</h2>
+        <h2>Bievenido</h2>
         <form id="formLogin" action="<?= $_SERVER["PHP_SELF"]; ?>" method="POST">
             <label for="username">Usuario:</label>
             <input type="text" id="username" name="username">

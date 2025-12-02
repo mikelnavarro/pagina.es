@@ -1,18 +1,13 @@
 * {
     font-family: "Arial";
 }
-
-body {
-    background-attachment: fixed;
-    background-color: #ccc;
-}
 /* FORMULARIO DE INTRODUCCIÓN DE LOS DATOS */
 form {
     display: flex;
     flex-direction: column;
     align-items: left;
     text-align: left;
-    box-shadow: 3px 3px 3px 3px #ccc;
+    box-shadow: 3px 3px 3px 3px #ffffff;
     border-radius: 2%;
     width: 70%;
     margin: 2px;
@@ -28,8 +23,6 @@ input {
     border-radius: 2%;
     width: 40%;
     max-width: 50%;
-    border-color: #b9b8b8;
-    border-style: 2px;
 }
 
 #Submit {

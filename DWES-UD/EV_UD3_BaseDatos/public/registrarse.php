@@ -32,15 +32,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             /* --- VARIABLES DE COLOR (Tema Mascotas) --- */
         :root {
             --color-primario: #4CAF50;
-            /* Verde de la naturaleza */
             --color-secundario: #FFD700;
-            /* Dorado brillante (juguetes) */
             --color-fondo: #F0F4F8;
-            /* Gris claro suave */
             --color-texto: #333;
             --color-sombra: rgba(0, 0, 0, 0.15);
         }
-        /* --- ESTILOS GENERALES Y FONDO --- */
         body {
             font-family: 'Arial', sans-serif;
             background-color: var(--color-fondo);
@@ -55,18 +51,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         /* ------------------------------------------- */
         /* --- FORMULARIO (Sección Central) --- */
         /* ------------------------------------------- */
-        /* --- TUS ESTILOS BASE MEJORADOS --- */
         form {
             /* Manteniendo tu estructura base */
             display: flex;
             flex-direction: column;
             gap: 1.5em;
-            /* Aumentado ligeramente para mejor espacio */
             padding: 0;
             align-items: center;
             margin: 0;
             width: 100%;
-            /* Eliminamos box-shadow del formulario y lo dejamos en el contenedor principal */
             box-shadow: none;
         }
 
@@ -79,7 +72,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         label #username,
         #clave {
             padding: 0;
-            /* Se quita el padding/margin de los labels */
             font-weight: bold;
             margin: 0;
             align-items: left;
@@ -154,7 +146,6 @@ OTRAS FUNCIONALIDADES
             max-width: 400px;
             width: 90%;
             margin-top: 80px;
-            /* Espacio para el menú fijo */
             text-align: center;
         }
 
