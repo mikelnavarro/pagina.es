@@ -10,14 +10,13 @@ if (!isset($_SESSION["usuario"])) {
 }
 $user = new Usuario();
 $sesion = $_SESSION["usuario"];
-echo "Usuario: " . $_SESSION["usuario"] . "<br>";
 $datosUsuario = $user->getUsername($sesion);
 print_r($datosUsuario);
-if ($datosUsuario) {
-}
 
-if ($_SERVER["REQUEST_METHOD"] === "GET") {
-    if ($_GET["action"] === "eliminar") {
+
+// Recibir datos de action y ID
+if (isset($_GET["action"]) && $_SERVER["REQUEST_METHOD"] === "GET") {
+    if ($_GET["action"] == "eliminar") {
         $id = $_GET["id"];
         if ($user->getID($id)) {
             $user->deleteUsername($id);
@@ -42,7 +41,6 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
@@ -53,12 +51,11 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             <div class="card-content">
                 <div class="card-text">
                     <strong>Nombre:</strong> <?= htmlspecialchars($datosUsuario["username"]) ?><br>
-                    <strong>Fecha de Nacimiento:</strong> 2019-01-15
+                    <strong>Password: </strong><?= htmlspecialchars($datosUsuario["password"]) ?>
                 </div>
             </div>
             <div>
-                <a href="verPerfil.php?action=eliminar&id=<?php echo $datosUsuario["id"]?>"
-                    class="btn btn-danger">Eliminar</a>
+                <a href="verPerfil.php?action=eliminar&id=<?php echo $datosUsuario["id"] ?>" class="btn btn-danger">Eliminar</a>
             </div>
         </div>
     </div>

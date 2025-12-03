@@ -1,3 +1,12 @@
+
+/* --- VARIABLES DE COLOR (Tema Mascotas) --- */
+:root {
+  --color-primario: #4caf50;
+  --color-secundario: #ffd700;
+  --color-fondo: #f0f4f8;
+  --color-texto: #333;
+  --color-sombra: rgba(0, 0, 0, 0.15);
+}
 /* --- ESTILOS GENERALES Y FONDO --- */
 body {
     font-family: 'Arial', sans-serif;
@@ -10,13 +19,14 @@ body {
     color: var(--color-texto);
     flex-direction: column;
 }
-
-
-
+main {
+    margin: 15px 15px 15px;
+}
 /* TABLA DE DATOS */
 table {
     border-collapse: collapse;
     width: 100%;
+    margin: 0px 20px;
 }
 
 th,

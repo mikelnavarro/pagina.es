@@ -38,18 +38,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <main>
-
+        <?php
         if (isset($_GET["redirigido"])) {
-        echo "<p>Haga Login para continuar.</p>";
+            echo "<p>Haga Login para continuar.</p>";
         }
-
-        ?> <?php
-
-    if (isset($err) && $err == true) {
-        echo "<p>Revise usuario y contraseña.</p>";
-    }
-
-    ?> <div id="loginContainer">
+        ?>
+        <?php
+        if (isset($err) && $err == true) {
+            echo "<p>Revise usuario y contraseña.</p>";
+        }
+        ?>
+        <div id="loginContainer">
             <h3>Bienvenido</h3>
             <form id="formLogin" action="<?= $_SERVER["PHP_SELF"]; ?>" method="POST">
                 <label for="username">Usuario:</label>
