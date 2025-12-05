@@ -23,7 +23,42 @@ if (isset($_GET["action"]) && $_GET["action"] === "borrar" && isset($_GET["id"])
 <head>
     <meta charset="UTF-8">
     <title>Listado de mascotas</title>
+    <link href="css/bootstrap.min_002.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
+    /* Estilos para el body */
+    body {
+        margin: 10px 20px 10px 20px;
+        /* Relleno para top, right, bottom, left */
+    }
+
+    .container {
+        /* Si quieres que el contenedor ocupe todo el ancho disponible, puedes eliminar max-width */
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        display: flex;
+        /* Añade flex para que las tarjetas se muestren en línea */
+        flex-wrap: wrap;
+        /* Permite que las tarjetas se ajusten y pasen a la siguiente línea si no hay espacio */
+        justify-content: space-between;
+        /* Espacio entre tarjetas. Puedes ajustar según prefieras */
+    }
+
+    .card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+        /* Ancho de las tarjetas. Puedes ajustar según prefieras */
+        width: calc(33% - 10px);
+        /* Esto asume que quieres 3 tarjetas por fila y resta 20px por el espacio entre tarjetas */
+        box-sizing: border-box;
+        /* Asegura que el padding y el borde se incluyan en el ancho total de la tarjeta */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     table {
         border-collapse: collapse;
         width: 100%;
@@ -53,46 +88,29 @@ if (isset($_GET["action"]) && $_GET["action"] === "borrar" && isset($_GET["id"])
         width: 100%;
     }
     </style>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
     <h2>Lista de mascotas</h2>
     <a href="../Logout.php">Cerrar sesion</a>
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Tipo</th>
-                <th>Fecha de Nacimiento</th>
-                <th>Imagen</th>
-                <th>Responsable</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            // Itera sobre el array de libros devuelto por el método
-            foreach ($listaMascotas as $row) {
-                echo "<tr>";
-                echo "<td>" . htmlspecialchars($row["id"]) . "</td>";
-                echo "<td>" . htmlspecialchars($row["nombre"]) . "</td>";
-                echo "<td>" . htmlspecialchars($row["tipo"]) . "</td>";
-                echo "<td>" . htmlspecialchars($row["fecha_nacimiento"]) . "</td>";
-                echo '<td><img src="' . $row['foto_url'] . '" alt="Foto"></td>';
-                echo "<td>" . htmlspecialchars($row["responsable"]) . "</td>";
-                echo "<td>";
-                echo "<a id=Editar href='modificar.php?action=modificar&id=" . htmlspecialchars($row['id']) . "'>Editar</a> | ";
-                echo "<a id=Borrar href='principal.php?action=borrar&id=" . htmlspecialchars($row['id']) . "'>Borrar</a>";
-                echo "</td>";
-                echo "</tr>";
-            }
-            ?>
-        </tbody>
-    </table>
-    <a href="registro.php">Registrar una Mascota</a>
+    <?php foreach ($listaMascotas as $pet): ?>
+
+    <div class="card">
+        <div class="card-content">
+            <img src="<?php echo $pet['foto_url'] ?>" class="card-img-top img-fluid" alt="">
+            <div class="card-text">
+                <strong>Responsable:</strong><?php echo $pet['responsable'] ?><br>
+                <strong>Nombre:</strong><?php echo $pet['nombre'] ?><br>
+                <strong>Tipo:</strong><?php echo $pet['tipo'] ?>rro<br>
+                <strong>Fecha de Nacimiento:</strong><?php echo $pet['fecha_nacimiento'] ?>
+            </div>
+        </div>
+        <div>
+            <a href="modificar.php?action=modificar&id=<?= $pet['id'] ?>" class="btn btn-warning">Cambiar foto</a>
+            <a href="principalCopy.php?action=borrar&id=<?= $pet['id'] ?>" class="btn btn-danger">Eliminar</a>
+        </div>
+    </div>
+    <?php endforeach; ?>
 </body>
 
 </html>

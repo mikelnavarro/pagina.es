@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/BBDDUD03-DWES/src" isTestSource="false" packagePrefix="Mikel\Bbddud03Dwes\" />
+      <sourceFolder url="file://$MODULE_DIR$/DWES-UD/EV_UD1-UD3-mikelnavarro/src" isTestSource="false" packagePrefix="Vespertino\EvUd1Ud3Mikelnavarro\" />
+      <sourceFolder url="file://$MODULE_DIR$/DWES-UD/EV_UD3_BaseDatos/src" isTestSource="false" packagePrefix="Mikelnavarro\EvUd\" />
+      <sourceFolder url="file://$MODULE_DIR$/DWES-UD/UD3-DWES/EJ_BBDD/src" isTestSource="false" packagePrefix="Mikelnavarro\EjBbdd\" />
+      <sourceFolder url="file://$MODULE_DIR$/DWES-UD/UD3-DWES/src" isTestSource="false" packagePrefix="Mikel\Ud3\" />
+      <sourceFolder url="file://$MODULE_DIR$/PROYECTO COMPOSER/src" isTestSource="false" packagePrefix="Mikel\Ud3\" />
+      <excludeFolder url="file://$MODULE_DIR$/BBDDUD03-DWES/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/DWES-UD/EV_UD1-UD3-mikelnavarro/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/DWES-UD/EV_UD3_BaseDatos/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/DWES-UD/UD3-DWES/EJ_BBDD/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/DWES-UD/UD3-DWES/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/DWES-UD/UD3-DWES/vendor/phpmailer/phpmailer" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MessDetector">
+    <phpmd_settings>
+      <phpmd_by_interpreter asDefaultInterpreter="true" interpreter_id="9c0ffbdb-ec59-494d-b98c-bba27b93aa19" timeout="30000" />
+    </phpmd_settings>
+  </component>
+  <component name="MessDetectorOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCSFixerOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PHPCodeSnifferOptionsConfiguration">
+    <option name="highlightLevel" value="WARNING" />
+    <option name="transferred" value="true" />
+  </component>
+  <component name="PhpCodeSniffer">
+    <phpcs_settings>
+      <phpcs_by_interpreter asDefaultInterpreter="true" interpreter_id="9c0ffbdb-ec59-494d-b98c-bba27b93aa19" timeout="30000" />
+    </phpcs_settings>
+  </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/BBDDUD03-DWES/vendor/composer" />
+      <path value="$PROJECT_DIR$/DWES-UD/EV_UD1-UD3-mikelnavarro/vendor/composer" />
+      <path value="$PROJECT_DIR$/DWES-UD/UD3-DWES/EJ_BBDD/vendor/composer" />
+      <path value="$PROJECT_DIR$/DWES-UD/EV_UD3_BaseDatos/vendor/composer" />
+      <path value="$PROJECT_DIR$/DWES-UD/UD3-DWES/vendor/composer" />
+      <path value="$PROJECT_DIR$/DWES-UD/UD3-DWES/vendor/phpmailer/phpmailer" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
+  <component name="PhpStan">
+    <PhpStan_settings>
+      <phpstan_by_interpreter asDefaultInterpreter="true" interpreter_id="9c0ffbdb-ec59-494d-b98c-bba27b93aa19" timeout="60000" />
+    </PhpStan_settings>
+  </component>
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+  <component name="Psalm">
+    <Psalm_settings>
+      <psalm_fixer_by_interpreter asDefaultInterpreter="true" interpreter_id="9c0ffbdb-ec59-494d-b98c-bba27b93aa19" timeout="60000" />
+    </Psalm_settings>
+  </component>
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+</project>

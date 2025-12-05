@@ -34,32 +34,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <title>Formulario de Login</title>
     <link rel="stylesheet" href="estilosForm.css">
-        <style>
-        /* Estilos básicos para que el formulario se vea ordenado */
-        form {
-            display: flex;
-            flex-direction: column;
-            width: 300px;
-            gap: 10px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        label {
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        input {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        input[type="submit"] {
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-            margin-top: 20px;
-        }
+    <style>
+    /* Estilos básicos para que el formulario se vea ordenado */
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        gap: 10px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    #clave {
+        padding: 12px 15px;
+        width: calc(100% - 30px);
+        margin-top: 5px;
+        height: auto;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
     </style>
 </head>
 

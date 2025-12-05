@@ -63,13 +63,12 @@ if (isset($_GET["action"]) && $_GET["action"] === "borrar" && isset($_GET["id"])
     <table>
         <thead>
             <tr>
-                <th>Responsable</th>
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Tipo</th>
                 <th>Fecha de Nacimiento</th>
                 <th>Imagen</th>
-                <th>Foto URL</th>
+                <th>Responsable</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -78,13 +77,12 @@ if (isset($_GET["action"]) && $_GET["action"] === "borrar" && isset($_GET["id"])
             // Itera sobre el array de libros devuelto por el método
             foreach ($listaMascotas as $row) {
                 echo "<tr>";
-                echo "<td>" . htmlspecialchars($row["id_persona"]) . "</td>";
                 echo "<td>" . htmlspecialchars($row["id"]) . "</td>";
                 echo "<td>" . htmlspecialchars($row["nombre"]) . "</td>";
                 echo "<td>" . htmlspecialchars($row["tipo"]) . "</td>";
                 echo "<td>" . htmlspecialchars($row["fecha_nacimiento"]) . "</td>";
                 echo '<td><img src="' . $row['foto_url'] . '" alt="Foto"></td>';
-                echo "<td>" . htmlspecialchars($row["foto_url"]) . "</td>";
+                echo "<td>" . htmlspecialchars($row["responsable"]) . "</td>";
                 echo "<td>";
                 echo "<a id=Editar href='modificar.php?action=modificar&id=" . htmlspecialchars($row['id']) . "'>Editar</a> | ";
                 echo "<a id=Borrar href='principal.php?action=borrar&id=" . htmlspecialchars($row['id']) . "'>Borrar</a>";

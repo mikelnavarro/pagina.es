@@ -27,6 +27,16 @@ class GestorMascotas
 			echo $th->getMessage();
 		}
 	}
+
+		public function cambiarFotos($datos)
+	{
+		$sql = "UPDATE mascotas SET foto_url=:foto_url WHERE id=:id";
+		$stmt = $this->conexion->prepare($sql);
+		$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
+		return $stmt->execute(array(
+			":fecha_nacimiento" => $datos["fecha_nacimiento"],			":foto_url" => $datos["foto_url"],
+		));
+	}
 	public function modificar($datos)
 	{
 		$sql = "UPDATE mascotas SET nombre=:nombre,tipo=:tipo,fecha_nacimiento=:fecha_nacimiento,foto_url=:foto_url,id_persona=:id_persona WHERE id=:id";
