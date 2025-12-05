@@ -1,0 +1,13 @@
+{
+    "name": "mikel/biblioteca",
+    "description": "Proyecto de Biblioteca Personal en Casa",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mikel\\Biblioteca\\": "src/"
+        }
+    }
+}
