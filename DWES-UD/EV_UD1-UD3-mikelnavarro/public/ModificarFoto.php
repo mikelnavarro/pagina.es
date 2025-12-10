@@ -4,33 +4,40 @@
 require '../vendor/autoload.php';
 require '../src/GestorMascotas.php';
 
+
 $datos = [];
 // Lista Mascotas
-if ($_SERVER["REQUEST_METHOD"]==="POST"){
-    subirArchivos();
-    $mascota = new GestorMascotas();
-
-
-
+$mascota = new GestorMascotas();
+$idMascota = null;
+// Comprobamos el id
+if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+    $idMascota = $_GET['id'];
+}
+if (!$idMascota) {
+    echo "Error: No se ha especificado un ID de una mascota válido.";
+}
+if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["action"] == "modificar") {
     // Fichero
     $name = $_FILES["foto"]["name"];
 
     $ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
     $dir = "../public/img/";
     $destino = $dir . $name;
-	$datos = array(
-        "foto_url"=> $destino,
-    		);
-	$correcto = $mascota->cambiarFotos($datos);
-
-
-    if ($correcto){
-        header("Location: principal.php?mensaje=Libro agregado correctamente");
+    $datos = array(
+            "foto_url" => $destino,
+    );
+    $correcto = $mascota->cambiarFotos($datos);
+    if ($correcto) {
+        header("Location: principalCopy.php");
         exit();
-   	} else {
-   		echo "Error al cargar.";
-   	}
+    } else {
+        echo "Error al cargar.";
+
+    }
 }
+
+
+
 echo "<pre>";
 print_r($datos);
 echo "</pre>";
@@ -106,19 +113,15 @@ function subirArchivos(){
 
 <body>
 
+    <a href="principalCopy.php">Página Principal</a>
     <div class="container form-wrapper">
         <div class="row justify-content-center">
             <!-- TARJETA: REGISTRAR MASCOTA -->
             <div class="col-md-6 mb-4">
                 <div class="card p-4">
-                    <h2 class="mb-3">Registrar Mascota</h2>
+                    <h2 class="mb-3">Modificar la Foto</h2>
 
                     <form action="<?= $_SERVER["PHP_SELF"]?>" method="POST" enctype="multipart/form-data">
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre:</label>
-                            <input type="text" name="nombre" id="nombre" class="form-control">
-                        </div>
-
                         <div class="mb-3">
                             <label for="foto" class="form-label">Foto:</label>
                             <input type="file" name="foto" id="foto" class="form-control">

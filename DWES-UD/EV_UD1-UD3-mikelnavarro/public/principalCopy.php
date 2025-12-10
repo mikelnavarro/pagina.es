@@ -12,7 +12,7 @@ $listaMascotas = $mascota->listarResponsable();
 if (isset($_GET["action"]) && $_GET["action"] === "borrar" && isset($_GET["id"])) {
     if (is_numeric($_GET["id"])) {
         $mascota->eliminar($_GET["id"]);
-        header("Location: principal.php?mensaje=Libro eliminado");
+        header("Location: principalCopy.php?mensaje=Mascota eliminada");
         exit();
     }
 }
@@ -91,10 +91,11 @@ if (isset($_GET["action"]) && $_GET["action"] === "borrar" && isset($_GET["id"])
 </head>
 
 <body>
+    <a href="registro.php">Registrar Una Mascota</a>
     <h2>Lista de mascotas</h2>
     <a href="../Logout.php">Cerrar sesion</a>
+    <div class="container">
     <?php foreach ($listaMascotas as $pet): ?>
-<div class="container">
     <div class="card">
         <div class="card-content">
             <img src="<?php echo $pet['foto_url'] ?>" class="card-img-top img-fluid" alt="">
@@ -106,7 +107,7 @@ if (isset($_GET["action"]) && $_GET["action"] === "borrar" && isset($_GET["id"])
             </div>
         </div>
         <div>
-            <a href="modificar.php?action=modificar&id=<?= $pet['id'] ?>" class="btn btn-warning">Cambiar foto</a>
+            <a href="ModificarFoto.php?action=modificar&id=<?= $pet['id'] ?>" class="btn btn-warning">Cambiar foto</a>
             <a href="principalCopy.php?action=borrar&id=<?= $pet['id'] ?>" class="btn btn-danger">Eliminar</a>
         </div>
     </div>
