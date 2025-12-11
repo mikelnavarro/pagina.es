@@ -3,45 +3,56 @@
 
 require '../vendor/autoload.php';
 require '../src/GestorMascotas.php';
-
-
-$datos = [];
 // Lista Mascotas
 $mascota = new GestorMascotas();
 $idMascota = null;
 // Comprobamos el id
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $idMascota = $_GET['id'];
+    $mascota_actual = $mascota->getID($idMascota);
+    if (!$mascota_actual) {
+        echo "Error, el ID no existe.";
+    }
+    if (!$idMascota) {
+        echo "Error: No se ha especificado un ID de una mascota válido.";
+    }
 }
-if (!$idMascota) {
-    echo "Error: No se ha especificado un ID de una mascota válido.";
-}
-if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["action"] == "modificar") {
-    // Fichero
-    $name = $_FILES["foto"]["name"];
 
-    $ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
-    $dir = "../public/img/";
-    $destino = $dir . $name;
-    $datos = array(
+if ($_SERVER["REQUEST_METHOD"] == "GET" && $_GET["action"] == "modificar") {
+    if (isset($_POST['foto'])) {
+        $foto = $_POST['foto'];
+
+
+        // Fichero
+        $name = $_FILES["foto"]["name"];
+
+        $ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
+        $dir = "../public/img/";
+        $destino = $dir . $name;
+        $datos = array(
             "foto_url" => $destino,
-    );
-    $correcto = $mascota->cambiarFotos($datos);
-    if ($correcto) {
-        header("Location: principalCopy.php");
-        exit();
-    } else {
-        echo "Error al cargar.";
+        );
+        $correcto = $mascota->cambiarFotos($datos);
+        echo "<pre>";
+        print_r($datos);
+        echo "</pre>";
 
+        header('Location: principalCopy.php?mensaje=Fotografía modificada');
+        exit();
+        if ($correcto) {
+        header('Location: principalCopy.php?mensaje=Fotografía modificada');
+            exit();
+        } else {
+            echo "Error al cargar.";
+        }
     }
 }
 
 
 
-echo "<pre>";
-print_r($datos);
-echo "</pre>";
-function subirArchivos(){
+
+function subirArchivos()
+{
 
 
     $name = $_FILES["foto"]["name"];
@@ -87,7 +98,6 @@ function subirArchivos(){
     } else {
         echo "<br>Error";
     }
-
 }
 ?>
 <!DOCTYPE html>
@@ -103,11 +113,11 @@ function subirArchivos(){
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-    /* NO pisamos .container de Bootstrap, usamos una clase propia */
-    .form-wrapper {
-        max-width: 800px;
-        margin: 20px auto;
-    }
+        /* NO pisamos .container de Bootstrap, usamos una clase propia */
+        .form-wrapper {
+            max-width: 800px;
+            margin: 20px auto;
+        }
     </style>
 </head>
 
@@ -121,15 +131,13 @@ function subirArchivos(){
                 <div class="card p-4">
                     <h2 class="mb-3">Modificar la Foto</h2>
 
-                    <form action="<?= $_SERVER["PHP_SELF"]?>" method="POST" enctype="multipart/form-data">
+                    <form action="<?= $_SERVER["PHP_SELF"] ?>" method="POST" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="foto" class="form-label">Foto:</label>
                             <input type="file" name="foto" id="foto" class="form-control">
                         </div>
 
-                        <button type="submit" class="btn btn-primary w-100">
-                            Registrar Mascota
-                        </button>
+                        <button type="submit" class="btn btn-primary w-100">Modificar</button>
 
                     </form>
                 </div>

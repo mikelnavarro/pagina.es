@@ -1,7 +1,7 @@
 <?php
 
 require "../vendor/autoload.php";
-require_once '../Conexion.php';
+require_once 'Conexion.php';
 class GestorMascotas
 {
 
@@ -34,7 +34,7 @@ class GestorMascotas
 		$stmt = $this->conexion->prepare($sql);
 		$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
 		return $stmt->execute(array(
-			":fecha_nacimiento" => $datos["fecha_nacimiento"],			":foto_url" => $datos["foto_url"],
+			":foto_url" => $datos["foto_url"]
 		));
 	}
 	public function modificar($datos)

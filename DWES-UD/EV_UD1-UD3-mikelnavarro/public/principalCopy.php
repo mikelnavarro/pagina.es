@@ -93,7 +93,7 @@ if (isset($_GET["action"]) && $_GET["action"] === "borrar" && isset($_GET["id"])
 <body>
     <a href="registro.php">Registrar Una Mascota</a>
     <h2>Lista de mascotas</h2>
-    <a href="../Logout.php">Cerrar sesion</a>
+    <a href="Logout.php">Cerrar sesion</a>
     <div class="container">
     <?php foreach ($listaMascotas as $pet): ?>
     <div class="card">
@@ -102,11 +102,12 @@ if (isset($_GET["action"]) && $_GET["action"] === "borrar" && isset($_GET["id"])
             <div class="card-text">
                 <strong>Responsable:</strong><?php echo $pet['responsable'] ?><br>
                 <strong>Nombre:</strong><?php echo $pet['nombre'] ?><br>
-                <strong>Tipo:</strong><?php echo $pet['tipo'] ?>rro<br>
+                <strong>Tipo:</strong><?php echo $pet['tipo'] ?><br>
                 <strong>Fecha de Nacimiento:</strong><?php echo $pet['fecha_nacimiento'] ?>
             </div>
         </div>
         <div>
+            <a href="modificar.php?action=modificar&id=<?= $pet['id'] ?>" class="btn btn-primary">Modificar La Mascota</a>
             <a href="ModificarFoto.php?action=modificar&id=<?= $pet['id'] ?>" class="btn btn-warning">Cambiar foto</a>
             <a href="principalCopy.php?action=borrar&id=<?= $pet['id'] ?>" class="btn btn-danger">Eliminar</a>
         </div>
