@@ -9,5 +9,5 @@ archivo(1).pdf
 /BBDDUD03-DWES/vendor
 package-lock.json
 package.json
-vendor/
-DWES-UD/EV_UD1-UD3-mikelnavarro/vendor/
+vendor
+DWES-UD/EV_UD1-UD3-mikelnavarro/vendor
