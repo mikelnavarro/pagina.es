@@ -12,7 +12,7 @@ function printPokemons(pokemons) {
     container.innerHTML = `
     ${container.innerHTML}
     <div class="card">
-    <img src="https://pokeres.bastionbot.org/images/pokemon/${getPokemonId(
+    <img src="https://pokeapi.co/api/v2/pokemon/${getPokemonId(
       pokemon.url
     )}.png"/>
     <span>Nº.${getPokemonId(pokemon.url)}</span>
