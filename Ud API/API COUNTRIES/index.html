@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="otrosestilos.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-    
+    <main class="principal">
+        <input id="busquedaNombre">
+        <div id="country-card">
+            <h4 id="country-name"></h4>
+            <p><strong>Capital:</strong> <span id="country-capital"></span></p>
+            <p><strong>Población:</strong> <span id="country-population"></span></p>
+            <p><strong>Idioma:</strong> <span id="country-language"></span></p>
+            <p><strong>Superficie:</strong> <span id="country-area"></span></p>
+            <p><strong>Moneda:</strong> <span id="country-currency"></span></p>
+        </div>
+                <!-- Columna Derecha: Bandera y Escudo -->
+        <div class="right-column">
+            <img id="country-flag" src="" alt="Bandera del país" />
+            <img id="country-coat" src="" alt="Escudo del país" />
+        </div>
+    </main>
 </body>
+
 </html>
