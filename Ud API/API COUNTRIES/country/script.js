@@ -6,6 +6,9 @@ const countryCapital = document.getElementById("country-capital");
 const inputNombre = document.getElementById("busquedaNombre");
 const population = document.getElementById("country-population");
 const countryCoat = document.getElementById("country-coat");
+const area = document.getElementById("country-area");
+const countryNameOfficial = document.getElementById("country-oficial");
+const currency = document.getElementById("country-currency");
 const urlApi = "https://restcountries.com/v3.1/name";
 // Obtener datos
 async function getDatos(inputNombre) {
@@ -48,9 +51,12 @@ function dibujaCards(paises) {
   countryName.textContent = paises.translations.spa.official;
   // Actualizar la capital del país
   countryCapital.textContent = paises.capital;
+  countryNameOfficial.textContent = paises.name.official;
   (population.textContent = new Intl.NumberFormat("es-ES", {
     maximumSignificantDigits: 3,
   }).format(paises.population)),
+  area.textContent = new Intl.NumberFormat("es-ES").format(paises.area);
+
     // Actualizar la imagen (src y alt)
     (flag.src = paises.flags.png || "placeholder.png"); // Usamos sprites.front_default
   flag.alt = paises.flags.alt || `Bandera de ${paises.name.official}`;
