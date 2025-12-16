@@ -15,11 +15,11 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Volcando estructura de base de datos para dwes
-CREATE DATABASE IF NOT EXISTS `dwes` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
-USE `dwes`;
+-- Volcando estructura de base de datos para gestormascotas
+CREATE DATABASE IF NOT EXISTS `gestormascotas` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+USE `gestormascotas`;
 
--- Volcando estructura para tabla dwes.usuarios
+-- Volcando estructura para tabla gestormascotas.usuarios
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `user` varchar(50) NOT NULL,
   `pass` varchar(255) NOT NULL,

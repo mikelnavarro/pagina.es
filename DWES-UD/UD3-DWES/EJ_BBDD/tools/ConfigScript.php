@@ -32,11 +32,3 @@ $dsn = "$driver:host=$host;dbname=$dbname;port=$port";
 echo "dsn: ".$dsn;
 
 }
-
-
-
-
-
-
-
-
