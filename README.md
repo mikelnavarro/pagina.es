@@ -1,5 +1,6 @@
 <div align="center">
 
+
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="55"/>
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="55"/>
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="55"/>
@@ -11,7 +12,11 @@
 
 ### Programación Orientada a Objetos  
 ### Desarrollo de Aplicaciones · Programación · Web  
-**HTML · CSS · JavaScript · Java · Markdown**
+**HTML · CSS · JavaScript · Java · PHP · Markdown**
+
+
+
+
 > *Repositorio central para organizar los contenidos,  
 unidades, prácticas y proyectos del curso académico*
 > *Diseñado para aprender, construir y escalar software moderno*
@@ -19,43 +24,37 @@ unidades, prácticas y proyectos del curso académico*
 </div>
 
 ---
-## 🏫 Descripción
+## Descripción
 Proyecto educativo para entender los principios de la  
 **Programación Orientada a Objetos** usando Java y JavaScript.
 
-Este repositorio se utiliza como **espacio principal del curso académico**,  
-donde se almacenan y organizan de forma progresiva:
-
-- 📁 Archivos de clase  
+Este repositorio se utiliza como **espacio principal del curso académico**, donde se almacenan y organizan de forma progresiva:
+- 📁 Archivos de clase
+- 🧪 Prácticas y ejercicios
 - 📘 Unidades didácticas  
-- 🧪 Prácticas y ejercicios  
 
 ---
-
-## 🎯 Finalidad del repositorio
+## Finalidad del repositorio
 - Mantener una estructura clara y ordenada
 - Facilitar el seguimiento del aprendizaje
 - Servir como referencia académica y técnica
 - Practicar el uso de Git y GitHub
-## 🎯 Objetivos de Aprendizaje
+
+
+## Objetivos de Aprendizaje
 - Comprender la estructura básica de un proyecto web
 - Aplicar HTML semántico correctamente
 - Utilizar CSS para diseño y maquetación
 - Introducir JavaScript para interactividad
 - Documentar correctamente el proyecto con Markdown
 
-
-## 🛠️ Tecnologías Utilizadas
-- **HTML5** — Estructura del contenido
-- **CSS3** — Estilos y diseño responsive
-- **JavaScript** — Funcionalidad básica
-- **Markdown** — Documentación académica
-
-## ⚙️ Tecnologías
+## Tecnologías
 - ☕ Java
-- 🟨 JavaScript
-- 🧱 HTML
-- 🎨 Markdown
+- 🟨 JavaScript — Funcionalidad
+- 🧱 HTML — Estructura del contenido
+- 🎨 Markdown — Documentación académica
+
+
 ## 🏗️ Estructura del proyecto
 ```text
 pagina.es
