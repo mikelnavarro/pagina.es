@@ -5,7 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/BBDDUD03-DWES/src" isTestSource="false" packagePrefix="Mikel\Bbddud03Dwes\" />
       <sourceFolder url="file://$MODULE_DIR$/DWES-UD/EV_UD1-UD3-mikelnavarro/src" isTestSource="false" packagePrefix="Vespertino\EvUd1Ud3Mikelnavarro\" />
       <sourceFolder url="file://$MODULE_DIR$/DWES-UD/EV_UD3_BaseDatos/src" isTestSource="false" packagePrefix="Mikelnavarro\EvUd\" />
-      <sourceFolder url="file://$MODULE_DIR$/DWES-UD/UD3-DWES/EJ_BBDD/src" isTestSource="false" packagePrefix="Mikelnavarro\EjBbdd\" />
+      <sourceFolder url="file://$MODULE_DIR$/DWES-UD/UD3-DWES/EJ_BBDD/src" isTestSource="false" packagePrefix="Mikelnavarro\Ud3\" />
       <sourceFolder url="file://$MODULE_DIR$/DWES-UD/UD3-DWES/src" isTestSource="false" packagePrefix="Mikel\Ud3\" />
       <sourceFolder url="file://$MODULE_DIR$/PROYECTO COMPOSER/src" isTestSource="false" packagePrefix="Mikel\Ud3\" />
       <sourceFolder url="file://$MODULE_DIR$/DWES-UD/biblioteca/src" isTestSource="false" packagePrefix="Mikel\Biblioteca\" />

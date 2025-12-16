@@ -1,5 +1,5 @@
-
-CREATE TABLE usuarios
+-- Tabla USUARIOS --
+CREATE TABLE restaurantes
 (
     CodRes INT AUTO_INCREMENT,
     Correo VARCHAR(90),
@@ -8,9 +8,18 @@ CREATE TABLE usuarios
     CP INT,
     Ciudad VARCHAR(45),
     Direccion VARCHAR(200),
-    CONSTRAINT pk_tienda_restaurante PRIMARY KEY(CodRes),
+    CONSTRAINT pk_tienda_restaurantes PRIMARY KEY(CodRes),
     CONSTRAINT uk_tienda_correo UNIQUE KEY(correo)
 )ENGINE=INNODB;
+-- Tabla CATEGORIAS --
+CREATE TABLE categorias
+(
+    CodCat INT AUTO_INCREMENT,
+    Nombre VARCHAR(45),
+    Descripcion VARCHAR(90),
+    CONSTRAINT pk_tienda_categorias PRIMARY KEY(CodCat)
+)ENGINE=INNODB;
+-- Tabla PRODUCTOS --
 CREATE TABLE productos 
 (
     CodProd INT AUTO_INCREMENT,
@@ -21,9 +30,9 @@ CREATE TABLE productos
     Categoria INT,
     CONSTRAINT pk_tienda_productos PRIMARY KEY(CodProd),
     CONSTRAINT uk_tienda_productos UNIQUE KEY(Categoria),
-    CONSTRAINT fk_tienda_categoria FOREIGN KEY(Categoria) REFERENCE categorias(CodCat)
+    CONSTRAINT fk_tienda_categorias FOREIGN KEY(Categoria) REFERENCES categorias(CodCat)
 )ENGINE=INNODB;
-
+-- Tabla Pedidos - Productos --
 CREATE TABLE pedidosproductos
 (
     CodPedProd INT AUTO_INCREMENT,
@@ -31,11 +40,17 @@ CREATE TABLE pedidosproductos
     Producto INT,
     Unidades INT,
     CONSTRAINT pk_tienda_pedidosproductos PRIMARY KEY(CodPedProd),
-    CONSTRAINT fk_tienda_producto FOREIGN KEY(Producto) REFERENCES productos(CodPro)
+    CONSTRAINT fk_tienda_productos FOREIGN KEY(Producto) REFERENCES productos(CodProd),
+    CONSTRAINT fk_tienda_pedidos FOREIGN KEY(Pedido) REFERENCES pedidos(CodPed)
 )ENGINE=INNODB;
-CREATE TABLE productos
+
+-- Tabla PEDIDOS --
+CREATE TABLE pedidos 
 (
-    CodProd INT AUTO_INCREMENT,
-    Nombre VARCHAR(45),
-    Descripcion VARCHAR(90),
-)ENGINE=INNODB;
+    CodPed INT AUTO_INCREMENT,
+    Fecha DATE,
+    Enviado INT,
+    Restaurante INT,
+    CONSTRAINT pk_tienda_pedidos PRIMARY KEY(CodPed),
+    CONSTRAINT fk_tienda_usuarios FOREIGN KEY(Restaurante) REFERENCES restaurantes(CodRes)
+)
