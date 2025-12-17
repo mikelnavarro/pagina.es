@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.3
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 02-12-2025 a las 16:47:00
--- Versión del servidor: 8.0.44
--- Versión de PHP: 8.2.29
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 17-12-2025 a las 13:17:49
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,10 +28,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `libros` (
-  `id` int NOT NULL,
-  `titulo` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `autor` varchar(255) COLLATE utf8mb4_general_ci DEFAULT 'Desconocido',
-  `n_paginas` int DEFAULT '0',
+  `id` int(11) NOT NULL,
+  `titulo` varchar(255) DEFAULT NULL,
+  `autor` varchar(255) DEFAULT 'Desconocido',
+  `n_paginas` int(11) DEFAULT 0,
   `fecha_publicacion` date DEFAULT '2001-01-01',
   `terminado` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -46,7 +46,8 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `n_paginas`, `fecha_publicacion`,
 (4, 'La Soledad', 'Anónimo', 0, '1999-12-02', 0),
 (7, 'Doña Casilda, Bilboko emakumerik zoragarriena', 'Mikel Garrido', 400, '1981-12-06', NULL),
 (8, 'Y corriendo volvería a esperarte', 'El Portal De Mi Vida', 34, '2007-06-06', NULL),
-(9, '1978: Espainiako Demokrazia', 'Nemesio Calzagorta,Laratz Urichirtu', 1300, '2004-12-06', NULL);
+(9, '1978: Espainiako Demokrazia', 'Nemesio Calzagorta,Laratz Urichirtu', 1300, '2004-12-06', NULL),
+(10, 'Federico Jiménez, un hombre de raíz', 'Luis del Pino', 60, '2025-12-29', NULL);
 
 -- --------------------------------------------------------
 
@@ -55,9 +56,9 @@ INSERT INTO `libros` (`id`, `titulo`, `autor`, `n_paginas`, `fecha_publicacion`,
 --
 
 CREATE TABLE `usuarios` (
-  `id` int NOT NULL,
-  `username` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `password` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL
+  `id` int(11) NOT NULL,
+  `username` varchar(20) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -96,13 +97,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `libros`
 --
 ALTER TABLE `libros`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

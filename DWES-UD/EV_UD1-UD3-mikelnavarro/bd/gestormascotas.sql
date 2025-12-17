@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-11-2023 a las 13:34:00
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 17-12-2025 a las 13:17:06
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `gestormascotas`
 --
-CREATE DATABASE IF NOT EXISTS `gestormascotas` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `gestormascotas`;
 
 -- --------------------------------------------------------
 
@@ -60,7 +58,9 @@ INSERT INTO `mascotas` (`id`, `nombre`, `tipo`, `fecha_nacimiento`, `foto_url`, 
 (3, 'Rallito', 'tortuga', '2015-09-21', '../public/img/tortuga2.jpeg', 2),
 (5, 'Rampante', 'tortuga', '2016-01-19', '../public/img/tortuga.jpeg', 2),
 (6, 'Torete', 'agaporni', '2019-01-15', '../public/img/agaporni2.jpeg', 4),
-(7, 'Sansón', 'gato', '2023-11-14', '../public/img/gato2.jpeg', 1);
+(7, 'Sansón', 'gato', '2023-11-14', '../public/img/gato2.jpeg', 1),
+(8, 'Lua', 'perro', '2026-01-08', '../public/img/pexels-blue-15701898.jpg', 2),
+(9, 'Pipo', 'perro', '2008-08-07', '../public/img/pexels-pixabay-220938.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -150,7 +150,7 @@ ALTER TABLE `logs`
 -- AUTO_INCREMENT de la tabla `mascotas`
 --
 ALTER TABLE `mascotas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `personas`
