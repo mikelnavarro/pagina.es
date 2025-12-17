@@ -4,6 +4,7 @@ namespace Mikelnavarro\TiendaAplicacion;
 
 use Mikelnavarro\TiendaAplicacion\Tools\Conexion;
 use PDO;
+
 class Categoria
 {
 
@@ -24,9 +25,19 @@ class Categoria
      *
      * Funciones
      */
-    public static function todas(): array {
+
+    public function listar()
+    {
         $pdo = Conexion::getConexion();
-        $stmt = $pdo->prepare("SELECT CodCat, Nombre, Descripcion FROM Categoria ORDER BY Nombre");
+        $sql = "SELECT CodCat, Nombre, Descripcion FROM categorias ORDER BY Nombre";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+    public static function todas(): array
+    {
+        $pdo = Conexion::getConexion();
+        $stmt = $pdo->prepare("SELECT CodCat, Nombre, Descripcion FROM categorias ORDER BY Nombre");
         $stmt->execute();
         $categorias = [];
         while ($row = $stmt->fetch(PDO::FETCH_OBJ)) {

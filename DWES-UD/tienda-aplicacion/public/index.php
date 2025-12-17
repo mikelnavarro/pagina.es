@@ -7,18 +7,23 @@ $categorias = Categoria::todas();
 ?>
 <!DOCTYPE html>
 <html lang="es">
-<head><meta charset="utf-8"><title>Inicio</title></head>
-<body>
-<h1>Bienvenido a la tienda</h1>
-<ul>
-<?php foreach ($categorias as $cat): ?>
-    <li>
-        <a href="productos.php?cat=<?= $cat->getCodCat() ?>">
-            <?= htmlspecialchars($cat->getNombre()) ?>
-        </a>
-    </li>
-<?php endforeach; ?>
-</ul>
-</body>
-</html>
 
+<head>
+    <meta charset="utf-8">
+    <title>Inicio</title>
+</head>
+
+<body>
+    <h1>Bienvenido a la tienda</h1>
+    <ul>
+        <?php foreach ($categorias as $cat): ?>
+        <li>
+            <a href="productos.php?categoria=<?= $cat->getCodCat() ?>">
+                <?= htmlspecialchars($cat->getNombre()) ?>
+            </a>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+</body>
+
+</html>

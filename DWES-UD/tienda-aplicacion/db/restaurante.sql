@@ -54,3 +54,8 @@ CREATE TABLE pedidos
     CONSTRAINT pk_tienda_pedidos PRIMARY KEY(CodPed),
     CONSTRAINT fk_tienda_usuarios FOREIGN KEY(Restaurante) REFERENCES restaurantes(CodRes)
 )
+INSERT INTO categorias (Nombre, Descripcion) VALUES
+("Bebidas sin alcohol", "Bebidas"),
+("Bebidas con alcohol", "Bebidas"),
+("Carne", "Para comer"),
+("Pescado", "Para comer");

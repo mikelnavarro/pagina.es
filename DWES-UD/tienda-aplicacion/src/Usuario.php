@@ -1,11 +1,13 @@
 <?php
 // src/Usuario.php
-namespace src;
-require_once __DIR__ . '/../tools/Validador.php';
+
+namespace Mikelnavarro\TiendaAplicacion;
+
+use Mikelnavarro\TiendaAplicacion\Tools\Conexion;
+use PDO;
 
 class Usuario
 {
-    use Validador;
     private $codRes;
     private $correo;
     private $clave;
@@ -14,7 +16,7 @@ class Usuario
     private $ciudad;
     private $direccion;
 
-    public function __construct($codRes, $correo, $clave, $cp, $ciudad, $direccion)
+    public function __construct($codRes, $correo, $clave, $cp, $pais, $ciudad, $direccion)
     {
         $this->codRes = $codRes;
         $this->correo = $correo;
@@ -24,15 +26,17 @@ class Usuario
         $this->ciudad = $ciudad;
         $this->direccion = $direccion;
     }
-    public function __destruct(){
+    public function __destruct()
+    {
 
-        unset($this->codRes, $this->correo, $this->clave, $this->cp, $this->ciudad, $this->direccion);
+        unset($this->codRes, $this->correo, $this->clave, $this->cp, $this->pais, $this->ciudad, $this->direccion);
     }
 
     /**
      * Método toString
      */
-    public function __toString() {
+    public function __toString()
+    {
         return "Restaurante:  {$this->codRes}, Correo: {$this->correo}, Clave: {$this->clave}";
     }
 
@@ -40,7 +44,9 @@ class Usuario
      * Usuarios
      */
 
-    public function listar($pdo) {
+    public function listar($pdo)
+    {
+        $pdo = Conexion::getConexion();
         $sql = "SELECT * FROM restaurantes";
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
@@ -50,7 +56,9 @@ class Usuario
         return $lista;
     }
 
-    public function login($correo, $password) {
+    public function login($correo, $password)
+    {
+        $pdo = Conexion::getConexion();
         $sql = "SELECT CodRes, Correo, Clave FROM restaurantes WHERE Correo = :correo AND Clave = :password";
         $stmt = $pdo->prepare($sql);
         return $stmt->execute([
@@ -60,40 +68,52 @@ class Usuario
     }
     // Getters
     // Setters
-    public function getCodRes(){
+    public function getCodRes()
+    {
         return $this->codRes;
     }
-    public function getCorreo(){
+    public function getCorreo()
+    {
         return $this->correo;
     }
-    public function getClave(){
+    public function getClave()
+    {
         return $this->clave;
     }
-    public function getCp(){
+    public function getCp()
+    {
         return $this->cp;
     }
-    public function getCiudad(){
+    public function getCiudad()
+    {
         return $this->ciudad;
     }
-    public function getDireccion(){
+    public function getDireccion()
+    {
         return $this->direccion;
     }
-    public function setCodRes($codRes){
+    public function setCodRes($codRes)
+    {
         $this->codRes = $codRes;
     }
-    public function setCorreo($correo){
+    public function setCorreo($correo)
+    {
         $this->correo = $correo;
     }
-    public function setClave($clave){
+    public function setClave($clave)
+    {
         $this->clave = $clave;
     }
-    public function setCp($cp){
+    public function setCp($cp)
+    {
         $this->cp = $cp;
     }
-    public function setCiudad($ciudad){
+    public function setCiudad($ciudad)
+    {
         $this->ciudad = $ciudad;
     }
-    public function setDireccion($direccion){
+    public function setDireccion($direccion)
+    {
         $this->direccion = $direccion;
     }
 }
