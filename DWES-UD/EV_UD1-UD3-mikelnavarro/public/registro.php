@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"]==="POST"){
 
 
     if ($correcto){
-        header("Location: principal.php?mensaje=Libro agregado correctamente");
+        header("Location: principalCopy.php?mensaje=Libro agregado correctamente");
         exit();
    	} else {
    		echo "Error al cargar.";
@@ -97,17 +97,20 @@ function subirArchivos(){
 
     <link href="css/bootstrap.min_002.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <style>
         /* NO pisamos .container de Bootstrap, usamos una clase propia */
         .form-wrapper {
             max-width: 800px;
             margin: 20px auto;
         }
+        #paginaprincipal {
+            max-width: 300px;
+            width: 6%;
+        }
     </style>
 </head>
 <body>
-
+    <a href="principalCopy.php"><img src="img/paginaprincipal.png" id="paginaprincipal" alt="button principal"></a>
     <div class="container form-wrapper">
         <div class="row justify-content-center">
             <!-- TARJETA: REGISTRAR MASCOTA -->
@@ -161,6 +164,6 @@ function subirArchivos(){
             </div>
         </div>
     </div>
-
+    <a href="principalCopy.php">Página Principal</a>
 </body>
 </html>

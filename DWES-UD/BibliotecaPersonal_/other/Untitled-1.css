@@ -1,0 +1,93 @@
+/* Body y tipografía */
+body {
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f4f7;
+  color: #212529;
+  line-height: 1.5;
+}
+
+/* Título principal */
+h1 {
+  font-weight: 800;
+  color: #1c1e21;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+/* Contenedor centrado y max-width */
+.container {
+  max-width: 1400px;
+}
+/* Cards */
+.card-custom {
+  max-width: 280px; /* limita ancho de cada card */
+  width: 100%; /* ocupa todo el ancho de la columna hasta el max */
+  margin: 0 auto; /* centra la card dentro de su columna */
+  border-radius: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-custom:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+/* Card body */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+/* Título y autor dentro de la card */
+.title-custom {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #0d0d0d;
+  margin-bottom: 0.3rem;
+}
+
+.author-custom {
+  font-style: italic;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Badges */
+.badge-pages {
+  font-size: 0.8rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.5rem;
+  background-color: #6c757d;
+  color: #fff;
+  margin-right: 0.3rem;
+}
+
+.badge-date {
+  font-size: 0.8rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.5rem;
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+/* Botón */
+.btn-custom {
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-custom:hover {
+  background-color: #0a58ca;
+  transform: translateY(-2px);
+}
+
+/* Responsivo y espaciamiento */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+/* Espaciado de la fila */
+.row.g-4 {
+  gap: 2rem; /* mayor separación horizontal y vertical */
+  justify-content: center; /* centrado en la fila */
+}

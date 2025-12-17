@@ -1,10 +1,10 @@
 {
-    "name": "mikelnavarro/ej_bbdd",
-    "description": "Proyecto ejercicio bbdd",
+    "name": "mikelnavarro/ud3",
+    "description": "Proyecto Ud 3",
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Mikelnavarro\\EjBbdd\\": "src/"
+            "Mikelnavarro\\Ud3\\": "src/"
         }
     },
     "authors": [

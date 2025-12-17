@@ -118,7 +118,7 @@ public static function lista($pdo): array{
      * Comprueba las credenciales en la tabla `usuarios`
      * Hay que pasarle un PDO
      */
-   public static function login(PDO $pdo): bool
+   public function login(PDO $pdo): bool
 {
     $sql = "SELECT user, nombre, email, edad 
             FROM usuarios 
@@ -145,4 +145,3 @@ public static function lista($pdo): array{
     return false;
 }
 }
-

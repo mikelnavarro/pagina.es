@@ -1,7 +1,7 @@
 <?php
 
 require "../vendor/autoload.php";
-require_once '../Conexion.php';
+require_once 'Conexion.php';
 class GestorMascotas
 {
 
@@ -18,14 +18,23 @@ class GestorMascotas
 	{
 
 		try {
-			$sql = "SELECT * FROM mascotas";
+			$sql = "SELECT foto_url FROM mascotas";
 			$stmt = $this->conexion->prepare($sql);
-			$stmt->bindParam("id", $id, PDO::PARAM_INT);
 			$stmt->execute();
 			return $stmt->fetch();
-		} catch (\Throwable $th) {
-			echo $th->getMessage();
+		} catch (Exception $exception) {
+			echo $exception->getMessage();
 		}
+	}
+
+		public function cambiarFotos($datos)
+	{
+		$sql = "UPDATE mascotas SET foto_url=:foto_url WHERE id=:id";
+		$stmt = $this->conexion->prepare($sql);
+		$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
+		return $stmt->execute(array(
+			":foto_url" => $datos["foto_url"]
+		));
 	}
 	public function modificar($datos)
 	{

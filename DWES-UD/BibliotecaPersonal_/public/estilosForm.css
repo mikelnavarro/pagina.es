@@ -1,0 +1,176 @@
+* {
+  font-family: "Arial";
+}
+/* --- VARIABLES DE COLOR (Tema Mascotas) --- */
+:root {
+  --color-primario: #4caf50;
+  --color-secundario: #ffd700;
+  --color-fondo: #f0f4f8;
+  --color-texto: #333;
+  --color-sombra: rgba(0, 0, 0, 0.15);
+}
+/* --- ESTILOS GENERALES Y FONDO --- */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--color-fondo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--color-texto);
+  flex-direction: column;
+}
+/* ------------------------------------------- */
+/* --- FORMULARIO (Sección Central) --- */
+/* ------------------------------------------- */
+form {
+  /* Manteniendo tu estructura base */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 0;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  box-shadow: none;
+}
+
+label {
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+}
+#clave {
+  padding: 12px 15px;
+  width: calc(100% - 30px);
+  margin-top: 5px;
+  height: auto;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+/* Estilos básicos para que el formulario se vea ordenado */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+label #username,
+#clave {
+  padding: 0;
+  font-weight: bold;
+  margin: 0;
+  align-items: left;
+}
+input[type="text"],
+input[type="password"] {
+  padding: 12px 15px;
+  width: calc(100% - 30px);
+  margin-top: 5px;
+  height: auto;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: var(--color-secundario);
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  outline: none;
+}
+/* Botón de ENVIAR DATOS
+        (Login) */
+#enviarDatos {
+  padding: 15px 30px;
+  border-radius: 50px;
+  border-style: none;
+  color: white;
+  background-color: var(--color-primario);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#enviarDatos:hover {
+  background-color: #388e3c;
+  transform: translateY(-2px);
+}
+/* --- OTRAS FUNCIONALIDADES --- */
+#botonRegistrarse {
+  background: none;
+  border: none;
+  color: var(--color-texto);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-top: 15px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+#botonRegistrarse:hover {
+  opacity: 1;
+  color: var(--color-primario);
+}
+#registroContainer, #loginContainer {
+  background-color: white;
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 400px;
+  width: 90%;
+  margin-top: 80px;
+  text-align: center;
+}
+
+#registroContainer h2, #loginContainer h2 {
+  color: var(--color-primario);
+  margin-bottom: 25px;
+  font-size: 2em;
+  border-bottom: 2px solid var(--color-secundario);
+  padding-bottom: 10px;
+}
+main {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--color-sombra);
+  padding: 40px;
+  max-width: 400px;
+  width: 90%;
+  margin-top: 80px;
+  text-align: center;
+}
+
+main h2 {
+  color: var(--color-primario);
+  margin-bottom: 25px;
+  font-size: 2em;
+  border-bottom: 2px solid var(--color-secundario);
+  padding-bottom: 10px;
+}

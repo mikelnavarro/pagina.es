@@ -1,24 +1,24 @@
 <?php
 // Importar Login
 require '../vendor/autoload.php';
-require '../Login.php';
+require '../src/Login.php';
 // Usar LOGIN BÁSICO
 $login = new Login();
 // Recibe datos por POST
-if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    if (isset($_POST["username"])){
-        $usu = $login->comprobarUsuario($_POST["username"],$_POST["clave"]);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["username"])) {
+        $usu = $login->comprobarUsuario($_POST["username"], $_POST["clave"]);
     }
 
     // Comprobamos en el caso que sea falso
-    if ($usu==FALSE){
+    if ($usu == FALSE) {
         $err = TRUE;
         $username = $_POST["username"];
-    }else{
+    } else {
         session_start();
         $_SESSION["usuario"] = $_POST["username"];
-        header("Location: principal.php");
-}
+        header("Location: principalCopy.php");
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -29,24 +29,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>Formulario de Login</title>
     <link rel="stylesheet" href="css/style.css">
 
-    <style>
-
-
-    </style>
 </head>
 
 <body>
-    <?php if(isset($_GET["redirigido"])) {
-    echo "<p>Haga Login para continuar.</p>";
-}
+    <?php if (isset($_GET["redirigido"])) {
+        echo "<p>Haga Login para continuar.</p>";
+    }
 
-?><?php if (isset($err) && $err==true) {
-    echo "<p>Revise usuario y contraseña.</p>";
-}
+    ?><?php if (isset($err) && $err == true) {
+            echo "<p>Revise usuario y contraseña.</p>";
+        }
 
-?><form action="<?= $_SERVER["PHP_SELF"]; ?>" method="POST"><label for="username">Usuario:</label><input type="text"
-            id="username" name="username"><label for="clave">Clave:</label><input type="text" id="clave"
-            name="clave"><input type="submit"></form>
+        ?>
+
+    <div class="loginContainer">
+        <form action="<?= $_SERVER["PHP_SELF"]; ?>" method="POST">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username">
+            <label for="clave">Clave:</label>
+            <input type="password" id="clave" name="clave"><input type="submit">
+        </form>
+
+    </div>
 </body>
 
 </html>

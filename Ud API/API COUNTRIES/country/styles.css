@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    color: #333;
+}
+.principal {
+    width: 360px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+/* TARJETA DE PAIS */
+#country-card {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+#country-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #00796b;
+}
+
+#country-capital {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #004d40;
+}
+#country-coat {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+#country-flag {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* INPUT DE BUSQUEDA */
+#busquedaNombre {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#busquedaNombre:focus {
+    outline: none;
+    border-color: #00796b;
+    box-shadow: 0 0 5px rgba(0,121,107,0.5);
+}

@@ -1,0 +1,13 @@
+{
+    "name": "mikelnavarro/tienda-aplicacion",
+    "description": "Projecto",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Mikelnavarro\\TiendaAplicacion\\": "src/"
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^7.0"
+    }
+}
