@@ -20,14 +20,15 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 <head>
     <meta charset="utf-8">
     <title>Inicio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
     <style>
-        h4 {
+    h4 {
 
-            color: red;
-            font-weight: bold;
-            font-family: 'Arial';
+        color: red;
+        font-weight: bold;
+        font-family: 'Arial';
 
-        }
+    }
     </style>
 </head>
 
@@ -36,11 +37,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <a href="login.php?loguerse=1">LOGIN</a>
     <ul>
         <?php foreach ($categorias as $cat): ?>
-            <li>
-                <a href="productos.php?categoria=<?= $cat->getCodCat() ?>">
-                    <?= htmlspecialchars($cat->getNombreCat()) ?>
-                </a>
-            </li>
+        <li>
+            <a href="productos.php?categoria=<?= $cat->getCodCat() ?>">
+                <?= htmlspecialchars($cat->getNombreCat()) ?>
+            </a>
+        </li>
         <?php endforeach; ?>
     </ul>
 </body>

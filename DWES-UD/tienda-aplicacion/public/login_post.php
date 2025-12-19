@@ -13,12 +13,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Intentar login
         Usuario::login($correo, $clave);
-
         $usu = Usuario::buscarPorCorreo($correo);
         if (!$usu) {
             header("Location: login.php?mensaje=Usuario no encontrado");
             exit();
         }
+
+        // Guardamos el array completo en 'usuario'
+        $_SESSION['usuario'] = $usu;
         $_SESSION['usu'] = [
             'CodRes'    => (int)$usu['CodRes'],
             'correo'    => $usu['Correo'],
