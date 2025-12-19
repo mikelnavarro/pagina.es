@@ -3,6 +3,7 @@
 
 namespace Mikelnavarro\TiendaAplicacion;
 
+use Exception;
 use Mikelnavarro\TiendaAplicacion\Tools\Conexion;
 use PDO;
 
@@ -43,6 +44,15 @@ class Usuario
     /** Listar
      * Usuarios
      */
+    public static function buscarPorCorreo(string $correo): ?array
+    {
+        $pdo = Conexion::getConexion();
+
+        $stmt = $pdo->prepare("SELECT * FROM restaurantes WHERE correo = ?");
+        $stmt->execute([$correo]);
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 
     public function listar($pdo)
     {
@@ -56,15 +66,19 @@ class Usuario
         return $lista;
     }
 
-    public function login($correo, $password)
+    public static function login($correo, $password)
     {
-        $pdo = Conexion::getConexion();
-        $sql = "SELECT CodRes, Correo, Clave FROM restaurantes WHERE Correo = :correo AND Clave = :password";
-        $stmt = $pdo->prepare($sql);
-        return $stmt->execute([
-            ':correo' => $correo,
-            ':password' => $password
-        ]);
+        try {
+            $pdo = Conexion::getConexion();
+            $sql = "SELECT CodRes, Correo, Clave FROM restaurantes WHERE Correo = :correo AND Clave = :password";
+            $stmt = $pdo->prepare($sql);
+            return $stmt->execute([
+                ':correo' => $correo,
+                ':password' => $password
+            ]);
+        } catch (Exception $exception) {
+            echo $exception->getMessage();
+        }
     }
     // Getters
     // Setters

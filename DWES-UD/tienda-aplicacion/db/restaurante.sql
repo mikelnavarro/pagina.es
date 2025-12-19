@@ -54,6 +54,10 @@ CREATE TABLE pedidos
     CONSTRAINT pk_tienda_pedidos PRIMARY KEY(CodPed),
     CONSTRAINT fk_tienda_usuarios FOREIGN KEY(Restaurante) REFERENCES restaurantes(CodRes)
 )
+INSERT INTO restaurantes (Correo, Clave, Pais, CP, Ciudad, Direccion) VALUES
+('elaguila@outlook.es','AER1','España', 03502, 'Benidorm', 'C. De la Alegría, 23'),
+('sanesteban@outlook.es','AER1','España', 03502, 'Benidorm', 'C. De Don Simón, 1'),
+('xijinping@restaurantechina.es','AER1','España', 08005, 'Barcelona', 'C. Del Sitio , 20');
 INSERT INTO categorias (Nombre, Descripcion) VALUES
 ("Bebidas sin alcohol", "Bebidas"),
 ("Bebidas con alcohol", "Bebidas"),
