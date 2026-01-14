@@ -1,0 +1,11 @@
+{
+    "name": "mikelnavarro/app",
+    "description": "MVC de aplicacion prueba web",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Mikelnavarro\\App\\": "src/"
+        }
+    },
+    "require": {}
+}
