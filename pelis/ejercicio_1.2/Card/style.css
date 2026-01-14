@@ -1,0 +1,40 @@
+body {
+    margin: auto;
+    width: 100%;
+}
+#movie-details {
+    font-family: 'Arial';
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+}
+#movie-title {
+    border: #ccc;
+    color: black;
+    text-align: center;
+}
+
+#movie-info {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+
+#movie-info {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+#movie-poster img {
+    width: 60%;
+    display: block;
+}
+#movie-title {
+    font-size: 1rem;
+    padding: 10px;
+    margin: 0;
+}
