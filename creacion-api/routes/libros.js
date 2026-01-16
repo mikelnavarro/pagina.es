@@ -19,4 +19,20 @@ router.get('/:id', (req, res) => {
   const libro = libros.find(l => l.id == req.params.id);
   libro ? res.json(libro) : res.status(404).json({ mensaje: 'Libro no encontrado' });
 });
+
+
+// POST - Crear un nuevo libro
+router.post('/', (req, res) => {
+    res.json({ mensaje: 'Libro creado', libro: req.body });
+});
+
+// PUT - Actualizar un libro
+router.put('/:id', (req, res) => {
+    res.json({ mensaje: 'Libro actualizado', id: req.params.id });
+});
+
+// DELETE - Eliminar un libro
+router.delete('/:id', (req, res) => {
+    res.json({ mensaje: 'Libro eliminado', id: req.params.id });
+});
 module.exports = router;

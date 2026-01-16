@@ -1,0 +1,37 @@
+### Obtener todos los libros
+GET http://localhost:3000/api/libros
+
+### Obtener un libro específico
+GET http://localhost:3000/api/libros/1
+
+### Crear un nuevo libro
+POST http://localhost:3000/api/libros
+Content-Type: application/json
+
+{
+  "titulo": "Don Juan",
+  "autor": "Lord Byron",
+  "año": 1819,
+  "precio": 25.99
+}
+
+### Actualizar un libro
+PUT http://localhost:3000/api/libros/1
+Content-Type: application/json
+
+{
+  "titulo": "El Quijote Actualizado",
+  "autor": "Cervantes",
+  "año": 1605
+}
+
+### Eliminar un libro
+DELETE http://localhost:3000/api/libros/1
+
+### Con parámetros de consulta
+GET http://localhost:3000/api/libros?autor=Cervantes&año=1605
+
+### Con headers personalizado
+GET http://localhost:3000/api/libros
+Authorization: Bearer token123456
+X-Custom-Header: valor-personalizado
