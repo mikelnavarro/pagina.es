@@ -1,0 +1,12 @@
+{
+    "name": "mikelnavarro/mvc-2026",
+    "description": "Proyecto Mikel MVC - DWES",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Mikelnavarro\\Mvc2026\\": "src/",
+            "App\\": "src/"
+        }
+    },
+    "require": {}
+}
