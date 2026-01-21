@@ -1,5 +1,4 @@
 const { MongoClient } = require('mongodb');
-
 // URL de conexión a MongoDB
 const MONGO_URL = process.env.MONGO_URL || 'mongodb://admin:password123@localhost:27017/biblioteca_api?authSource=admin';
 const DB_NAME = process.env.DB_NAME || 'biblioteca_api';
