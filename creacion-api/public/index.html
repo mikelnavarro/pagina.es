@@ -4,14 +4,18 @@
 <head>
     <meta charset="UTF-8" />
     <title>Catálogo de Libros</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
 
 <body>
     <h1>Catálogo de Libros</h1>
     <input id="buscar" placeholder="Busca un libro de una API creada">
-    <ul id="lista-libros"></ul>
+    <section id="lista-libros">
+        <span id="libro-id">ID_LIBRO: </span>
+        <h2 id="libro-titulo"></h2>
+        <p id="libro-autor"></p>
+    </section>
     <button class="btn-add">➕ Agregar Libro</button>
 </body>
 
