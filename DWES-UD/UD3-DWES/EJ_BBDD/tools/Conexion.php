@@ -1,5 +1,7 @@
 <?php
 // tools/Conexion.php
+use Mikelnavarro\TiendaAplicacion\core\Config;
+
 require_once __DIR__ . '/../tools/Config.php';
 
 // Esta clase también deberia ser singleton.

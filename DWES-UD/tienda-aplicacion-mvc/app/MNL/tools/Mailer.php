@@ -1,9 +1,8 @@
 <?php
-namespace Mikelnavarro\TiendaAplicacion\Tools;
+namespace MNL\tools;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use MNL\tools\Config;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 

@@ -1,6 +1,8 @@
 <?php
 // src/Usuario.php
 
+use MNL\tools\Validador;
+
 require_once __DIR__ . '/../tools/Validador.php';
 
 class Usuario

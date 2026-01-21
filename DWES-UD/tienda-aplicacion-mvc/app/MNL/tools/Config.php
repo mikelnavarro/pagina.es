@@ -1,6 +1,6 @@
 <?php
 
-namespace Mikelnavarro\TiendaAplicacion\Tools;
+namespace MNL\tools;
 /**
  * Vamos a usar un patrón Singleton para que solo haya una instancia del objeto "Config"
  * Y se use en toda la aplicación.
@@ -27,7 +27,7 @@ class Config
     {
         // Si no existe la instancia, la creamos
         if (self::$instancia === null) {
-            self::$instancia = new \MNL\tools\Config();
+            self::$instancia = new Config();
         }
 
         // Devolvemos siempre la misma instancia

@@ -26,7 +26,7 @@ class Config
     {
         // Si no existe la instancia, la creamos
         if (self::$instancia === null) {
-            self::$instancia = new Config();
+            self::$instancia = new \Mikelnavarro\TiendaAplicacion\core\Config();
         }
 
         // Devolvemos siempre la misma instancia

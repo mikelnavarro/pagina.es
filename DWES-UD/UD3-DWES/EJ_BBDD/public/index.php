@@ -1,6 +1,8 @@
 <?php
 // public/index.php
 
+use Mikelnavarro\TiendaAplicacion\core\Config;
+
 session_start();
 
 require_once __DIR__ . '/../tools/Config.php';

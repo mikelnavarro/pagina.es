@@ -1,0 +1,18 @@
+        <h1>Productos</h1>
+        <div class="grid-productos">
+            <?php foreach ($productos as $p): ?>
+                <div class="producto-card">
+                    <h3><?= htmlspecialchars($p['Nombre']) ?></h3>
+                    <p><?= htmlspecialchars($p['Descripcion']) ?></p>
+                    <p><strong>Peso:</strong> <?= $p['Peso'] ?> g</p>
+                    <p><strong>Stock:</strong> <?= $p['Stock'] ?></p>
+                    <p class="precio"><?= number_format($p['Precio'] ?? 0, 2) ?> €</p>
+
+                    <form action="add_carrito.php" method="POST">
+                        <input type="hidden" name="id" value="<?= $p['CodProd'] ?>">
+                        <input type="number" name="cantidad" value="1" min="1">
+                        <button class="btn" type="submit">Añadir al carrito</button>
+                    </form>
+                </div>
+            <?php endforeach; ?>
+        </div>

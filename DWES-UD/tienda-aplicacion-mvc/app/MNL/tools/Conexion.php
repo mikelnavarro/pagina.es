@@ -1,6 +1,5 @@
 <?php
-namespace Mikelnavarro\TiendaAplicacion\Tools;
-use MNL\tools\Config;
+namespace MNL\tools;
 use PDO;
 use PDOException;
 
