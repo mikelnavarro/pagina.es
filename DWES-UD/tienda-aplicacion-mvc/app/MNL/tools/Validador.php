@@ -1,6 +1,5 @@
 <?php
 // tools/Validador.php
-
 namespace MNL\tools;
 trait Validador
 {

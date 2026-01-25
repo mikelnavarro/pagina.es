@@ -1,6 +1,6 @@
 <?php
 
-namespace Mikelnavarro\TiendaAplicacion;
+namespace MikelNavarro\TiendaAplicacion\Models;
 
 use MNL\tools\Conexion;
 use PDO;
@@ -13,17 +13,13 @@ class Categoria
     private $nombreCat;
     private $descripcion;
 
-    public function __construct($codCat, $nombreCat, $descripcion)
-    {
-        $this->codCat = $codCat;
-        $this->nombreCat = $nombreCat;
-        $this->descripcion = $descripcion;
-    }
+    public function __construct() {}
 
 
     /*
      *
      * Funciones
+     * 
      */
 
     public function listar()
@@ -34,18 +30,37 @@ class Categoria
         $stmt->execute();
         return $stmt->fetchAll();
     }
-    public static function todas(): array
+
+    /**
+     * Obtiene productos de una categoría específica.
+    */
+    public function getProductosPorCategoria(int $categoriaId): array
     {
         $pdo = Conexion::getConexion();
-        $stmt = $pdo->prepare("SELECT CodCat, Nombre, Descripcion FROM categorias ORDER BY Nombre");
+        $stmt = $pdo->prepare("
+            SELECT id, nombre, precio, stock 
+            FROM producto 
+            WHERE categoria_id = :categoria_id 
+            ORDER BY nombre
+        ");
+        $stmt->bindParam(':categoria_id', $categoriaId, \PDO::PARAM_INT);
         $stmt->execute();
-        $categorias = [];
-        while ($row = $stmt->fetch(PDO::FETCH_OBJ)) {
-            $categorias[] = new self($row->CodCat, $row->Nombre, $row->Descripcion);
-        }
-        return $categorias;
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+    /**
+     * Obtiene todas las categorías.
+     */
+    public function getTodas(): array
+    {
+        $pdo = Conexion::getConexion();
+        $stmt = $pdo->prepare("SELECT id, nombre FROM categoria ORDER BY nombre");
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 
+
+
+    // Getters y Setters
 
     public function getCodCat()
     {

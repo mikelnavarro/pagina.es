@@ -1,0 +1,42 @@
+tienda-aplicacion-mvc/
+├── app/                          # Configuración y herramientas
+│   ├── config/                   # Archivos de configuración
+│   │   └── Config.php            # Constantes globales (rutas, BD, etc.)
+│   ├── db/                       # Gestión de base de datos
+│   │   └── Database.php          # Clase para conexión PDO
+│   └── MNL/tools/                # Tus herramientas reutilizables
+│       ├── Validador.php
+│       └── Mailer.php            # Envoltorio de PHPMailer
+│
+├── src/                          # Código fuente bajo namespace "MikelNavarro\TiendaAplicacion"
+│   ├── core/                     # Componentes base del MVC
+│   │   └── ControllerBase.php    # Clase abstracta base para todos los controladores
+│   ├── controllers/              # Controladores específicos
+│   │   ├── CategoriaController.php
+│   │   ├── CarritoController.php
+│   │   ├── PedidoController.php
+│   │   └── RestauranteController.php
+│   ├── models/                   # Modelos (entidades + lógica de acceso a BD)
+│   │   ├── Categoria.php
+│   │   ├── Producto.php
+│   │   ├── Pedido.php
+│   │   └── Usuario.php
+│   └── iniciador.php             # Inicializa autoload, config y BD
+│
+├── views/                        # Vistas (solo presentación, sin lógica de negocio)
+│   ├── categoria/
+│   │   ├── categorias.php
+│   │   └── listar.php
+│   ├── carrito/
+│   │   └── listar.php
+│   ├── pedido/
+│   │   └── crear.php
+│   └── login.php
+│
+├── public/                       # Único punto accesible desde el navegador
+│   ├── index.php                 # Front controller (único punto de entrada)
+│   └── .htaccess                 # Reescribe rutas a index.php
+│
+├── vendor/                       # Autogenerado por Composer
+├── composer.json                 # Autoload PSR-4 + dependencias
+└── composer.lock                 # Autogenerado

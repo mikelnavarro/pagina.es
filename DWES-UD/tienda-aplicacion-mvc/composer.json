@@ -4,11 +4,9 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Mikelnavarro\\TiendaAplicacion\\": "app/src/",
-            "MNL\\Tools\\": "src/MNL/Tools/"
+            "Mikelnavarro\\TiendaAplicacion\\": "src/",
+            "MNL\\Tools\\": "app/MNL/tools/"
         }
     },
-    "require": {
-        "phpmailer/phpmailer": "^7.0"
-    }
+    "require": {}
 }

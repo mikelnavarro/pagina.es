@@ -1,6 +1,6 @@
 <?php
 
-namespace Mikelnavarro\TiendaAplicacion;
+namespace MikelNavarro\TiendaAplicacion\Models;
 
 use MNL\tools\Conexion;
 
@@ -21,6 +21,13 @@ class Pedido
     }
 
     // Base de Datos
+        /**
+     * Crea un nuevo pedido en la base de datos y sus detalles.
+     *
+     * @param int $usuarioId ID del usuario que realiza el pedido
+     * @param array $items Lista de objetos o arrays con ['producto_id', 'unidades', 'precio']
+     * @return int|false ID del pedido creado o false si falla
+     */
     // Funciones
 
     // Listar Pedidos
