@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Evitar el /public en la URL
+RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
+RewriteRule ^ %1 [L,NE,R=302]
+
+# Si la ruta no exige redirigir a /public/index.php (punto de entrada)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirigir todo a index.php
+RewriteRule ^ public/index.php [L]
+
+RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
+

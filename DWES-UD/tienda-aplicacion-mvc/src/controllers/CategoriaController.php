@@ -1,19 +1,26 @@
 <?php
 
-namespace MikelNavarro\TiendaAplicacion\Controllers;
-use MikelNavarro\TiendaAplicacion\Models\Categoria;
-use MikelNavarro\TiendaAplicacion\Core\ControllerBase;
+namespace Acme\IntranetRestaurante\Controllers;
+use Acme\IntranetRestaurante\Models\Categoria;
+use Acme\IntranetRestaurante\Core\ControllerBase;
+use PDO;
+
 
 class CategoriaController extends ControllerBase
 {
+    private Categoria $categoriaModel;
+
+    public function __construct()
+    {
+        $this->categoriaModel = new Categoria();
+    }
 
     /**
      * Muestra la lista de todas las categorías.
      */
     public function categorias()
     {
-        $modelo = new Categoria();
-        $categorias = $modelo->getTodas();
+        $categorias = $this->categoriaModel->getTodas();
         $this->renderView('categoria/categorias', ['categorias' => $categorias]);
     }
 
@@ -24,8 +31,7 @@ class CategoriaController extends ControllerBase
     */
     public function listar(int $id)
     {
-        $modelo = new Categoria();
-        $productos = $modelo->getProductosPorCategoria($id);
+        $productos = $this->categoriaModel->getProductosPorCategoria($id);
         $this->renderView('categoria/listar', [
             'productos' => $productos,
             'categoriaId' => $id

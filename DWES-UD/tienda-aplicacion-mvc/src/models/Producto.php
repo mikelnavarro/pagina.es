@@ -1,5 +1,5 @@
 <?php
-namespace Mikelnavarro\TiendaAplicacion;
+namespace Acme\IntranetRestaurante\Models;
 use MNL\tools\Conexion;
 use PDO;
 

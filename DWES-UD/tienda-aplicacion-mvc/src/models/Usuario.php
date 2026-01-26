@@ -1,24 +1,25 @@
 <?php
 // src/Usuario.php
 
-namespace Mikelnavarro\TiendaAplicacion;
+namespace Acme\IntranetRestaurante\Models;
 
+use MNL\tools\Db;
 use Exception;
-use MNL\tools\Conexion;
-use PDO;
 
 class Usuario
 {
-    private $codRes;
-    private $correo;
-    private $clave;
+    private Db $db;
+    private ?int $codRes;
+    private ?string $correo;
+    private ?string $clave;
     private $cp;
     private $pais;
     private $ciudad;
     private $direccion;
 
-    public function __construct($codRes, $correo, $clave, $cp, $pais, $ciudad, $direccion)
+    public function __construct($codRes = null, $correo = null, $clave = null, $cp = null, $pais = null, $ciudad = null, $direccion = null, Db $db = null)
     {
+        $this->db = $db ?? new Db();
         $this->codRes = $codRes;
         $this->correo = $correo;
         $this->clave = $clave;
@@ -44,40 +45,66 @@ class Usuario
     /** Listar
      * Usuarios
      */
+    /**
+     * Búsqueda estática por correo (compatibilidad).
+     */
     public static function buscarPorCorreo(string $correo): ?array
     {
-        $pdo = Conexion::getConexion();
-
-        $stmt = $pdo->prepare("SELECT * FROM restaurantes WHERE correo = ?");
-        $stmt->execute([$correo]);
-
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        $db = new Db();
+        $db->query("SELECT * FROM restaurantes WHERE Correo = :correo");
+        $db->bind(':correo', $correo);
+        $row = $db->registro(); // objeto o false
+        if ($row === false || $row === null) return null;
+        return (array)$row;
     }
 
-    public function listar($pdo)
+
+
+    public function listar(): array
     {
-        $pdo = Conexion::getConexion();
         $sql = "SELECT * FROM restaurantes";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute();
-
-        $lista = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        return $lista;
+        $this->db->query($sql);
+        $rows = $this->db->registros();
+        $result = [];
+        foreach ($rows as $o) {
+            $result[] = (array)$o;
+        }
+        return $result;
     }
 
-    public static function login($correo, $password)
+    /**
+     * Login estático: devuelve fila del usuario o null.
+     */
+    public static function login(string $correo, string $password): ?array
     {
         try {
-            $pdo = Conexion::getConexion();
-            $sql = "SELECT CodRes, Correo, Clave FROM restaurantes WHERE Correo = :correo AND Clave = :password";
-            $stmt = $pdo->prepare($sql);
-            return $stmt->execute([
-                ':correo' => $correo,
-                ':password' => $password
-            ]);
+            $db = new Db();
+            $db->query("SELECT CodRes, Correo, Clave FROM restaurantes WHERE Correo = :correo AND Clave = :password");
+            $db->bind(':correo', $correo);
+            $db->bind(':password', $password);
+            $row = $db->registro();
+            if ($row === false || $row === null) return null;
+            return (array)$row;
         } catch (Exception $exception) {
-            echo $exception->getMessage();
+            return null;
+        }
+    }
+
+    /**
+     * Login usando la conexión inyectada.
+     */
+    public function loginInstance(string $correo, string $password): ?array
+    {
+        try {
+            $sql = "SELECT CodRes, Correo, Clave FROM restaurantes WHERE Correo = :correo AND Clave = :password";
+            $this->db->query($sql);
+            $this->db->bind(':correo', $correo);
+            $this->db->bind(':password', $password);
+            $row = $this->db->registro();
+            if ($row === false || $row === null) return null;
+            return (array)$row;
+        } catch (Exception $exception) {
+            return null;
         }
     }
     // Getters

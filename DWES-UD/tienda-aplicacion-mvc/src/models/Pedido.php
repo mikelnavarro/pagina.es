@@ -1,7 +1,6 @@
 <?php
 
-namespace MikelNavarro\TiendaAplicacion\Models;
-
+namespace Acme\IntranetRestaurante\Models;
 use MNL\tools\Conexion;
 
 class Pedido
@@ -29,15 +28,6 @@ class Pedido
      * @return int|false ID del pedido creado o false si falla
      */
     // Funciones
-
-    // Listar Pedidos
-    public function listar():array {
-        $pdo = Conexion::getConexion();
-        $sql = "SELECT * FROM pedido WHERE codPedido = :codPedido";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute(["codPedido"] => $this->codPedido);
-        return $stmt->fetchAll();
-    }
 
 
     // Getters y Setters

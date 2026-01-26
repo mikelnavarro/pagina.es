@@ -4,8 +4,9 @@
     "type": "project",
     "autoload": {
         "psr-4": {
+            "Acme\\IntranetRestaurante\\": "src/",
             "Mikelnavarro\\TiendaAplicacion\\": "src/",
-            "MNL\\Tools\\": "app/MNL/tools/"
+            "MNL\\Tools\\": "tools/"
         }
     },
     "require": {}
