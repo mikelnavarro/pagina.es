@@ -1,0 +1,35 @@
+### Configuración de variables
+@hostname = localhost
+@port = 5000
+@host = http://{{hostname}}:{{port}}
+
+### 1. Registrar un nuevo usuario
+# Este endpoint debería ejecutar el método userModel.create()
+POST {{host}}/register
+Content-Type: application/json
+
+{
+    "username": "coder_2026",
+    "email": "contacto@ejemplo.com",
+    "password": "password_seguro_123"
+}
+
+### 2. Intentar registrar el mismo usuario (Prueba de índice único)
+# Debería devolver un error 400 o 409 debido al índice 'unique' en MongoDB
+POST {{host}}/register
+Content-Type: application/json
+
+{
+    "username": "coder_2026",
+    "email": "contacto@ejemplo.com",
+    "password": "otra_password"
+}
+
+### 3. Login de usuario (Si implementaste la comparación de bcrypt)
+POST {{host}}/login
+Content-Type: application/json
+
+{
+    "email": "contacto@ejemplo.com",
+    "password": "password_seguro_123"
+}
