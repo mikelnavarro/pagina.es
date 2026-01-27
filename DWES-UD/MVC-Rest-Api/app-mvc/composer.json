@@ -1,0 +1,13 @@
+{
+    "name": "mikelnavarro/app-mvc",
+    "description": "Proyecto de API REST con MVC en PHP",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Mikelnavarro\\AppMvc\\": "src/",
+            "Mikelnavarro\\AppMvc\\tools": "tools/",
+            "Mikelnavarro\\AppMvc\\Config": "config/"
+        }
+    },
+    "require": {}
+}
